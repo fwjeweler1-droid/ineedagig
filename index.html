@@ -37,14 +37,20 @@ h3{font-size:1.14rem;margin:0 0 10px}p{line-height:1.65}.lead{font-size:1.18rem;
 .choice-entry{padding:44px 0 23px}
 .choice-entry h1{margin:10px 0 12px;font-size:clamp(2.5rem,5.6vw,4.8rem)}
 .choice-entry > .lead{margin:0;max-width:100%}
-.choice{display:flex;flex-direction:column;align-items:stretch}
-.choice h2{font-size:clamp(1.55rem,3.2vw,2.45rem);margin:11px 0 7px}
-.choice > p:not(.choice-links){flex:1;margin:9px 0 17px}
-.choice .btn{width:100%;margin-top:auto}
-.choice-links{font-size:.9rem;margin:14px 0 0;line-height:1.45}
-.choice-links a{color:var(--mint);text-underline-offset:3px}
-.choice-footnote{font-size:.83rem;color:var(--muted);margin:9px 0 0}
+.choice-option{min-width:0}
+.choice{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:330px;text-decoration:none;padding:20px;overflow:hidden;transition:border-color .15s ease,transform .15s ease,box-shadow .15s ease}
+.choice:hover{transform:translateY(-2px);border-color:var(--mint);box-shadow:0 12px 28px #06151c77}
+.choice-art{display:flex;align-items:center;justify-content:center;width:100%;height:245px;min-width:0}
+.choice-art img{display:block;max-width:100%;max-height:100%;height:100%;width:100%;object-fit:contain}
+.choice-title{display:block;text-align:center;font-weight:850;font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.15;letter-spacing:-.035em;color:var(--cream);margin-top:8px}
+.choice-below{text-align:center;padding:12px 15px 4px}
+.choice-below p{margin:0 0 7px;color:var(--muted);font-size:.95rem;line-height:1.55}
+.choice-below a{color:var(--mint);text-decoration:underline;text-underline-offset:4px;font-size:.94rem;font-weight:650;line-height:1.9}
+.choice-below a:hover{color:var(--cream)}
+.link-dot{color:var(--muted);padding:0 7px}
+.choice-footnote{font-size:.83rem;color:var(--muted);margin:14px 0 0;text-align:center}
 .mint-ink{color:var(--mint)}
+.story{display:block;max-width:840px;text-align:center;padding:40px 0}.story .lead{max-width:unset}
 .role{background:var(--card);border:1px solid var(--border);border-radius:17px;padding:26px;min-width:0}
 .role:first-child{border-color:#b49362}
 .role .kicker{font-size:.79rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:800}
@@ -80,7 +86,9 @@ footer .wrap{display:flex;gap:15px;justify-content:space-between;flex-wrap:wrap}
 footer a{color:var(--mint)}
 [hidden]{display:none!important}
 @media(max-width:950px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr minmax(230px,.65fr);gap:20px}.hub{grid-template-columns:1fr}}
-@media(max-width:710px){nav{align-items:flex-start;padding:17px 0;flex-direction:column}.navlinks{gap:14px}.hero{grid-template-columns:1fr;padding:36px 0}.mascot-frame{max-width:380px}.steps,.cards{grid-template-columns:1fr}#member-requests .booking-roles{grid-template-columns:1fr}.section-pad{padding:40px 0}h1{font-size:clamp(2.7rem,11vw,4.2rem)}.role{padding:22px}.focus .booking-roles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.choice-entry{padding:27px 0 19px}.choice-entry h1{font-size:clamp(2.1rem,7vw,3.2rem)}.choice{padding:14px}.choice h2{font-size:clamp(1.1rem,4.4vw,1.5rem);letter-spacing:-.02em}.choice .kicker{font-size:.67rem;letter-spacing:.04em}.choice p{font-size:.82rem;line-height:1.45}.choice .btn{padding:10px 7px;font-size:.8rem;min-height:50px;overflow-wrap:anywhere}.choice-links{font-size:.76rem}.choice-footnote{line-height:1.45}}
+@media(max-width:710px){nav{align-items:flex-start;padding:17px 0;flex-direction:column}.navlinks{gap:14px}.hero{grid-template-columns:1fr;padding:36px 0}.steps,.cards{grid-template-columns:1fr}#member-requests .booking-roles{grid-template-columns:1fr}.section-pad{padding:40px 0}h1{font-size:clamp(2.7rem,11vw,4.2rem)}.role{padding:22px}.focus .booking-roles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.choice-entry{padding:27px 0 19px}.choice-entry h1{font-size:clamp(2.1rem,7vw,3.2rem)}.choice{min-height:220px;padding:9px}.choice-art{height:145px}.choice-title{font-size:clamp(1rem,3.6vw,1.35rem);margin-top:9px}.choice-below{padding:10px 3px 0}.choice-below p{font-size:.77rem;line-height:1.45}.choice-below a{font-size:.79rem;line-height:1.55}.link-dot{padding:0 3px}.choice-footnote{line-height:1.45}}
+@media(max-width:360px){.focus .booking-roles{gap:7px}.choice{min-height:190px;padding:7px}.choice-art{height:120px}.choice-title{font-size:1rem}.choice-below a{font-size:.75rem}}
+@media(prefers-reduced-motion:reduce){.choice{transition:none}.choice:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -100,34 +108,36 @@ footer a{color:var(--mint)}
   <h1 id="choice-title">Need a gig? <span>Need talent?</span></h1>
   <p class="lead">Two simple paths. Choose the one that fits you.</p>
   <div class="booking-roles" aria-label="Choose how to get started">
-   <article class="role choice">
-    <div class="kicker">Musicians · Bands · Creative talent</div>
-    <h2>I'm a musician</h2>
-    <p>Join free, create your profile once, and get discovered across the Intentional Noise network. Find performances, connect with other artists, and share your work when you're ready.</p>
-    <a class="btn mint" href="https://connect.intentionalnoise.info/auth.html?role=musician">Create my free profile</a>
-    <p class="choice-links"><a href="#opportunities">Browse available gigs</a> <span aria-hidden="true">·</span> <a href="artists.html">Meet other artists</a></p>
-   </article>
-   <article class="role choice">
-    <div class="kicker">Venues · Events · Private bookings</div>
-    <h2>I'm hiring for an event</h2>
-    <p>Need live music for a bar, wedding, festival, party, or another event? Tell us what you need, review interested artists, and work out the details directly.</p>
-    <a class="btn" href="https://connect.intentionalnoise.info/fill-my-stage.html">Post my event request</a>
-    <p class="choice-links">Free request · No booking agency fees</p>
-   </article>
+   <div class="choice-option">
+    <a class="role choice" href="https://connect.intentionalnoise.info/auth.html?role=musician" aria-label="I'm a musician — create my free Connect profile">
+     <span class="choice-art"><img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="Froggy, the official Intentional Noise mascot" loading="eager" decoding="async" width="900" height="900"></span>
+     <span class="choice-title">I'm a musician</span>
+    </a>
+    <div class="choice-below">
+     <p>Musicians, bands, artists and creators: make your free profile and find your people.</p>
+     <a href="https://connect.intentionalnoise.info/auth.html?role=musician">Create my free profile</a> <span class="link-dot" aria-hidden="true">·</span> <a href="#opportunities">See available gigs</a>
+    </div>
+   </div>
+   <div class="choice-option">
+    <a class="role choice" href="https://connect.intentionalnoise.info/fill-my-stage.html" aria-label="I'm hiring for an event — post a booking request">
+     <span class="choice-art"><img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="Ineeda Gig, the approved booking mascot" loading="eager" decoding="async" width="1254" height="1254"></span>
+     <span class="choice-title">I'm hiring for an event</span>
+    </a>
+    <div class="choice-below">
+     <p>Book performers for a venue, party, wedding, festival or special event.</p>
+     <a href="https://connect.intentionalnoise.info/fill-my-stage.html">Post my event request</a> <span class="link-dot" aria-hidden="true">·</span> <a href="artists.html">Browse artists</a>
+    </div>
+   </div>
   </div>
-  <p class="choice-footnote">One free Connect account powers your profile or event requests. Posting a request is not a confirmed booking or contract.</p>
+    <p class="choice-footnote">One free Connect account powers your profile or event requests. Posting a request is not a confirmed booking or contract.</p>
  </section>
 </div>
-<section class="wrap hero" aria-label="About IneedaGig">
+<section class="wrap hero story" aria-label="About IneedaGig">
  <div>
   <div class="eyebrow">For real stages and real performers</div>
-  <h2>Fill the stage.<br><span class="mint-ink">Find the sound.</span></h2>
-  <p class="lead">IneedaGig is the easy-to-remember front door to Intentional Noise Connect. Musicians build their presence once. Event organizers find the right talent. The conversations and arrangements stay between you.</p>
-  <p class="micro"><strong>Musician first?</strong> Your profile starts private, and you decide when to publish it across the connected sites.</p>
- </div>
- <div class="mascot-frame">
-  <img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" width="1254" height="1254" alt="Ineeda Gig, the approved venue-booking frog mascot, with her guitar and Request a Band sign">
-  <p>Meet Ineeda Gig — your guide to finding the act for your next show.</p>
+  <h2>Fill the stage. <span class="mint-ink">Find the sound.</span></h2>
+  <p class="lead">IneedaGig is your easy-to-remember front door to Intentional Noise Connect. One account, one connected community, and direct conversations between the people making music happen.</p>
+  <p class="micro"><strong>Artists:</strong> Your profile starts private. You decide when to publish across the connected sites.</p>
  </div>
 </section>
 <section class="wrap section-pad" aria-labelledby="how-title">
