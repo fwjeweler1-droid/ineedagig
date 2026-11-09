@@ -77,7 +77,7 @@ footer a{color:var(--mint)}
  <nav class="wrap" aria-label="Main navigation">
   <a class="logo" href="./">Ineeda<b>Gig</b><small>Part of Intentional Noise Connect</small></a>
   <div class="navlinks">
-   <a href="#book">Book talent</a><a href="#opportunities">Find a gig</a><a href="#social">Social reach</a>
+   <a href="#book">Book talent</a><a href="#opportunities">Venue bookings</a><a href="#member-requests">Member gig requests</a><a href="#social">Social reach</a>
    <a href="https://connect.intentionalnoise.info/auth.html" target="_blank" rel="noopener noreferrer">My Connect account</a>
   </div>
  </nav>
@@ -127,7 +127,7 @@ footer a{color:var(--mint)}
  <div class="wrap">
   <div class="row-head">
    <div><div class="eyebrow">Live opportunities from Connect</div><h2 id="opportunities-title">Stages looking for musicians</h2></div>
-   <a class="btn alt" href="https://connect.intentionalnoise.info/fill-my-stage.html#openRequests">View all on Connect</a>
+   <a class="btn alt" href="#member-requests">Also see member gig requests</a>
   </div>
   <p class="detail">Showing only publicly open future venue requests. Private drafts, applicant messages and personal contact details do not appear here.</p>
   <div id="featured" hidden aria-live="polite">
@@ -140,6 +140,26 @@ footer a{color:var(--mint)}
   <p id="feedStatus" class="status" role="status" aria-live="polite">Checking current opportunities…</p>
   <div id="bookingCards" class="cards"></div>
  </div>
+
+<section class="wrap section-pad" id="member-requests" aria-labelledby="member-requests-title">
+ <div class="eyebrow">Auditions · Band openings · Music work</div>
+ <h2 id="member-requests-title">Member gig requests</h2>
+ <p class="lead">Looking for a guitarist, drummer, vocalist, sound engineer or a substitute player? The Connect members' request board is the home for those opportunities. Only signed-in members can read or post those requests.</p>
+ <div class="booking-roles" style="padding:5px 0 10px">
+  <article class="role">
+   <div class="kicker">Musicians looking for work</div>
+   <h3>Find member-only openings</h3>
+   <p>See band positions, auditions, performance openings and other music-work requests from the Connect community.</p>
+   <a class="btn mint" id="memberBrowse" href="https://connect.intentionalnoise.info/gig-requests.html">Browse member requests</a>
+  </article>
+  <article class="role">
+   <div class="kicker">Bands and members hiring</div>
+   <h3>Post a member request</h3>
+   <p>Post a band vacancy or music-work request in the existing Connect members' board. It uses your Connect account, not a new IneedaGig registration.</p>
+   <a class="btn" href="https://connect.intentionalnoise.info/gig-requests.html">Post member gig request</a>
+  </article>
+ </div>
+ <p class="micro">One booking hub, two kinds of opportunities. Venue offers are public above; member gig requests retain Connect's member-only privacy rules. Private messages stay on Connect.</p>
 </section>
 <section class="wrap section-pad hub" id="social" aria-labelledby="social-title">
  <div class="hub-copy">
@@ -178,6 +198,7 @@ footer a{color:var(--mint)}
 const API='https://xyudcdgjyormlokwhfoi.supabase.co/rest/v1/venue_booking_requests';
 const KEY='sb_publishable_-gMviWXPBzov-2D-htf9iA_y6ZVV-q0';
 const CONNECT='https://connect.intentionalnoise.info/fill-my-stage.html';
+const PUBLIC_HOME='https://ineedagig.net/';
 const $=id=>document.getElementById(id);
 let rows=[],selected=null;
 function dateKey(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
@@ -185,7 +206,8 @@ function dateText(s){const d=new Date(s+'T12:00:00');return isNaN(d.getTime())?s
 function money(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(Number(n))}
 function budget(b){return b.budget_kind==='quotes'?'Quotes welcome':b.budget_kind==='fixed'?(money(b.budget_min)+' offer'):(money(b.budget_min)+'–'+money(b.budget_max)+' budget')}
 const actNames={band:'Band',solo:'Solo musician',duo:'Duo',trio:'Trio',any:'Open to suggestions'};
-function offerUrl(id){return CONNECT+'?booking='+encodeURIComponent(id)+'#openRequests'}
+function offerUrl(id){return PUBLIC_HOME+'?booking='+encodeURIComponent(id)+'#opportunities'}
+function respondUrl(id){return CONNECT+'?booking='+encodeURIComponent(id)+'#openRequests'}
 function textElement(tag,value,cls){const el=document.createElement(tag);el.textContent=value;if(cls)el.className=cls;return el}
 function createCard(b){
  const card=document.createElement('article');card.className='listing';
@@ -194,7 +216,7 @@ function createCard(b){
  card.append(textElement('p',[b.city,b.region,b.country].filter(Boolean).join(', '),'subtitle'));
  card.append(textElement('p',(b.genre||'Music style open')+' · '+budget(b),'spec'));
  const actions=textElement('div','','actions');
- const a=textElement('a','View & respond','btn');a.href=offerUrl(b.id);actions.append(a);
+ const a=textElement('a','View & respond','btn');a.href=respondUrl(b.id);actions.append(a);
  const share=textElement('button','Share this gig','alt');share.type='button';share.addEventListener('click',()=>selectOffer(b));actions.append(share);
  card.append(actions);return card;
 }
@@ -264,6 +286,12 @@ document.querySelectorAll('[data-platform]').forEach(btn=>btn.addEventListener('
 }));
 $('filter').addEventListener('input',render);
 $('refresh').addEventListener('click',load);
+const memberKeyword=(new URLSearchParams(location.search).get('q')||'').slice(0,100);
+if(memberKeyword){
+ $('memberBrowse').href='https://connect.intentionalnoise.info/gig-requests.html?q='+encodeURIComponent(memberKeyword);
+ const note=textElement('p','Your keyword will carry to the signed-in Connect member board: '+memberKeyword,'detail');
+ $('member-requests').insertBefore(note,$('member-requests').querySelector('.booking-roles'));
+}
 load();focusShared();
 })();
 </script>
