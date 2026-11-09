@@ -33,7 +33,18 @@ h3{font-size:1.14rem;margin:0 0 10px}p{line-height:1.65}.lead{font-size:1.18rem;
 .mascot-frame img{width:100%;height:auto;display:block;object-fit:contain;border-radius:14px}
 .mascot-frame p{font-size:.87rem;text-align:center;color:#c9dedd;margin:13px 0 2px}
 .focus{border-block:1px solid #32515b;background:#102733}
-.booking-roles{display:grid;grid-template-columns:1fr 1fr;gap:19px;padding:24px 0}
+.booking-roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px;padding:22px 0 8px}
+.choice-entry{padding:44px 0 23px}
+.choice-entry h1{margin:10px 0 12px;font-size:clamp(2.5rem,5.6vw,4.8rem)}
+.choice-entry > .lead{margin:0;max-width:100%}
+.choice{display:flex;flex-direction:column;align-items:stretch}
+.choice h2{font-size:clamp(1.55rem,3.2vw,2.45rem);margin:11px 0 7px}
+.choice > p:not(.choice-links){flex:1;margin:9px 0 17px}
+.choice .btn{width:100%;margin-top:auto}
+.choice-links{font-size:.9rem;margin:14px 0 0;line-height:1.45}
+.choice-links a{color:var(--mint);text-underline-offset:3px}
+.choice-footnote{font-size:.83rem;color:var(--muted);margin:9px 0 0}
+.mint-ink{color:var(--mint)}
 .role{background:var(--card);border:1px solid var(--border);border-radius:17px;padding:26px;min-width:0}
 .role:first-child{border-color:#b49362}
 .role .kicker{font-size:.79rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:800}
@@ -69,7 +80,7 @@ footer .wrap{display:flex;gap:15px;justify-content:space-between;flex-wrap:wrap}
 footer a{color:var(--mint)}
 [hidden]{display:none!important}
 @media(max-width:950px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr minmax(230px,.65fr);gap:20px}.hub{grid-template-columns:1fr}}
-@media(max-width:710px){nav{align-items:flex-start;padding:17px 0;flex-direction:column}.navlinks{gap:14px}.hero{grid-template-columns:1fr;padding:36px 0}.mascot-frame{max-width:380px}.booking-roles,.steps,.cards{grid-template-columns:1fr}.section-pad{padding:40px 0}h1{font-size:clamp(2.7rem,11vw,4.2rem)}.role{padding:22px}}
+@media(max-width:710px){nav{align-items:flex-start;padding:17px 0;flex-direction:column}.navlinks{gap:14px}.hero{grid-template-columns:1fr;padding:36px 0}.mascot-frame{max-width:380px}.steps,.cards{grid-template-columns:1fr}#member-requests .booking-roles{grid-template-columns:1fr}.section-pad{padding:40px 0}h1{font-size:clamp(2.7rem,11vw,4.2rem)}.role{padding:22px}.focus .booking-roles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.choice-entry{padding:27px 0 19px}.choice-entry h1{font-size:clamp(2.1rem,7vw,3.2rem)}.choice{padding:14px}.choice h2{font-size:clamp(1.1rem,4.4vw,1.5rem);letter-spacing:-.02em}.choice .kicker{font-size:.67rem;letter-spacing:.04em}.choice p{font-size:.82rem;line-height:1.45}.choice .btn{padding:10px 7px;font-size:.8rem;min-height:50px;overflow-wrap:anywhere}.choice-links{font-size:.76rem}.choice-footnote{line-height:1.45}}
 </style>
 </head>
 <body>
@@ -83,39 +94,42 @@ footer a{color:var(--mint)}
  </nav>
 </header>
 <main>
-<section class="wrap hero" aria-label="IneedaGig introduction">
+<div class="focus" id="book">
+ <section class="wrap choice-entry" aria-labelledby="choice-title">
+  <div class="eyebrow">IneedaGig · Free to get started</div>
+  <h1 id="choice-title">Need a gig? <span>Need talent?</span></h1>
+  <p class="lead">Two simple paths. Choose the one that fits you.</p>
+  <div class="booking-roles" aria-label="Choose how to get started">
+   <article class="role choice">
+    <div class="kicker">Musicians · Bands · Creative talent</div>
+    <h2>I'm a musician</h2>
+    <p>Join free, create your profile once, and get discovered across the Intentional Noise network. Find performances, connect with other artists, and share your work when you're ready.</p>
+    <a class="btn mint" href="https://connect.intentionalnoise.info/auth.html?role=musician">Create my free profile</a>
+    <p class="choice-links"><a href="#opportunities">Browse available gigs</a> <span aria-hidden="true">·</span> <a href="artists.html">Meet other artists</a></p>
+   </article>
+   <article class="role choice">
+    <div class="kicker">Venues · Events · Private bookings</div>
+    <h2>I'm hiring for an event</h2>
+    <p>Need live music for a bar, wedding, festival, party, or another event? Tell us what you need, review interested artists, and work out the details directly.</p>
+    <a class="btn" href="https://connect.intentionalnoise.info/fill-my-stage.html">Post my event request</a>
+    <p class="choice-links">Free request · No booking agency fees</p>
+   </article>
+  </div>
+  <p class="choice-footnote">One free Connect account powers your profile or event requests. Posting a request is not a confirmed booking or contract.</p>
+ </section>
+</div>
+<section class="wrap hero" aria-label="About IneedaGig">
  <div>
   <div class="eyebrow">For real stages and real performers</div>
-  <h1>Fill the stage.<br><span>Find the sound.</span></h1>
-  <p class="lead">IneedaGig brings bars, venues and event organizers together with working musicians. Post the gig, review responses, and talk directly with the people who can play your room.</p>
-  <div class="hero-actions">
-   <a class="btn" href="https://connect.intentionalnoise.info/fill-my-stage.html">Post a booking request</a>
-   <a class="btn alt" href="#opportunities">I'm looking for work</a>
-  </div>
-  <p class="micro"><strong>Free to get started.</strong> Requests aren't confirmed bookings or contracts. No payment is collected here.</p>
+  <h2>Fill the stage.<br><span class="mint-ink">Find the sound.</span></h2>
+  <p class="lead">IneedaGig is the easy-to-remember front door to Intentional Noise Connect. Musicians build their presence once. Event organizers find the right talent. The conversations and arrangements stay between you.</p>
+  <p class="micro"><strong>Musician first?</strong> Your profile starts private, and you decide when to publish it across the connected sites.</p>
  </div>
  <div class="mascot-frame">
   <img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" width="1254" height="1254" alt="Ineeda Gig, the approved venue-booking frog mascot, with her guitar and Request a Band sign">
   <p>Meet Ineeda Gig — your guide to finding the act for your next show.</p>
  </div>
 </section>
-<div class="focus" id="book">
- <div class="wrap booking-roles">
-  <article class="role">
-   <div class="kicker">I run a venue or event</div>
-   <h2>I need a band.</h2>
-   <p>Describe your room, date, music style and what you're offering. Save privately or publish for musicians to respond.</p>
-   <a class="btn" href="https://connect.intentionalnoise.info/fill-my-stage.html">Fill My Stage!</a>
-  </article>
-  <article class="role">
-   <div class="kicker">I'm a musician or band</div>
-   <h2>I need a gig.</h2>
-   <p>Create one free Connect account before posting gig requests or responding to venues. Your private artist profile is created automatically and can be published across the four websites when you're ready.</p>
-   <a class="btn mint" href="https://connect.intentionalnoise.info/auth.html?role=musician&amp;next=%2Fgig-requests.html">Create my musician account</a>
-   <p><a href="#opportunities">See available work</a> · <a href="artists.html">Browse artist profiles</a></p>
-  </article>
- </div>
-</div>
 <section class="wrap section-pad" aria-labelledby="how-title">
  <div class="eyebrow">Booking, without the runaround</div><h2 id="how-title">From empty stage to first song.</h2>
  <div class="steps">
