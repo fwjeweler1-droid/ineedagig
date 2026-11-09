@@ -68,3 +68,19 @@ A future opt-in auto-publishing service requires user-authorized account connect
 ### Live acceptance still pending
 
 Test public feed, mobile layout, sign-in roundtrip, one real venue post, one musician response, copy/share links, non-public draft protection, filled/closed link handling, and the exact domain deployment. No automated external posting or real booking was performed as part of this source update. Leave MFA unchanged (disabled).
+
+
+## Canonical booking navigation — November 8, 2026
+
+**IneedaGig.net is the single public entry point for booking discovery and booking requests.** Other Intentional Noise sites should link here rather than advertise independent public booking services.
+
+- Venue booking opportunities: \`https://ineedagig.net/#opportunities\`
+- Venue booking intake: \`https://ineedagig.net/#book\` (operational Connect form is used after the visitor chooses to post)
+- Member auditions, band vacancies and music-work requests: \`https://ineedagig.net/#member-requests\` (existing signed-in Connect member board used to browse and post)
+- Shareable public venue booking URL: \`https://ineedagig.net/?booking=<UUID>#opportunities\`; a live, open public record must be checked before showing the opportunity.
+
+Existing secure implementation remains on Connect: \`venue_booking_requests\`, \`venue_booking_interests\`, \`venue_booking_thread_messages\`, and separate members-only \`gig_requests\`. **No member-only data is published anonymously.** No duplicate accounts, tables, submission services, or messages are created on IneedaGig.
+
+The existing \`connect.intentionalnoise.info/fill-my-stage.html\` and \`/gig-requests.html\` stay functional as signed-in operational forms. This is currently **one visitor-facing public hub, not yet a single-domain end-to-end booking form**. Do not redirect or delete those operational pages until equivalent authenticated workflows have been tested on the canonical domain. \`.info\` navigation, \`.band\` links, Connect search, FROG call-to-actions, and newly generated share links now direct public discovery to IneedaGig.
+
+The FROG promotional card board is distinct from dated booking requests; display it as music and gig promotions to prevent visitor confusion. Live browser acceptance and all cross-site links still require confirmation on desktop and mobile.
