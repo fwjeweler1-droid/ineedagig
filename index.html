@@ -118,6 +118,9 @@ footer{border-color:#48694f}.lead{color:#e0e9dc}
 .speech-card p{margin:0 0 10px;color:#e0e8dd;font-size:.94rem}
 .speech-card a{color:#c5f5aa;font-weight:750;text-underline-offset:4px}
 .speech-card .privacy-text{font-size:.91rem}
+.speech-card.sheriff-privacy{color:inherit;text-decoration:none;cursor:pointer;transition:border-color .15s ease,transform .15s ease}
+.speech-card.sheriff-privacy:hover,.speech-card.sheriff-privacy:focus-visible{border-color:var(--gold);transform:translateY(-2px)}
+.speech-card.sheriff-privacy .privacy-cta{display:inline-block;color:#c5f5aa;font-weight:800;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:750px){.conversation-grid{grid-template-columns:1fr}.speech-card img{width:29%}.mascot-conversation{padding:36px 0}}
 @media(max-width:430px){.speech-card{gap:12px;padding:12px}.speech-card img{width:30%}.speech-card h3{font-size:1.08rem}.speech-card p{font-size:.83rem}}
 </style>
@@ -179,10 +182,10 @@ footer{border-color:#48694f}.lead{color:#e0e9dc}
    <img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="Ineeda Gig" loading="lazy">
    <div><div class="voice">Ineeda says</div><h3>“Everything here!”</h3><p>Free web presence to show your work and connect with people. See what's included.</p><a href="free-vs-paid.html">See the free features</a></div>
   </article>
-  <article class="speech-card">
-   <img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="Froggy" loading="lazy">
-   <div><div class="voice">Sheriff Froggy says</div><h3>“YOUR RIGHTS TO PRIVACY ARE…”</h3><p class="privacy-text">“We don't keep, track, or distribute your personal information.”</p><a href="https://connect.intentionalnoise.info/">Review Connect information</a></div>
-  </article>
+  <a class="speech-card sheriff-privacy" href="https://intentionalnoise.info/privacy.html#sheriff-rights" aria-label="Read Sheriff Frog's privacy rights and privacy information">
+   <img src="https://intentionalnoise.info/assets/Frog_Sheriff_Privacy_Rights_Poster.png" alt="Sheriff FROG holding the approved privacy-rights clipboard" loading="lazy" onerror="this.hidden=true">
+   <div><div class="voice">Sheriff Froggy says</div><h3>“YOUR RIGHTS TO PRIVACY ARE…”</h3><p class="privacy-text">“We don't keep, track, or distribute your personal information.”</p><span class="privacy-cta">Read our privacy information</span></div>
+  </a>
   <article class="speech-card ineeda">
    <img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="Ineeda Gig" loading="lazy">
    <div><div class="voice">Ineeda says</div><h3>“Here's what might cost you.”</h3><p>Optional third-party storage and services can have their own charges. Nothing upgrades automatically.</p><a href="free-vs-paid.html#paid-title">See possible costs</a></div>
@@ -277,7 +280,7 @@ footer{border-color:#48694f}.lead{color:#e0e9dc}
  </div>
 </section>
 </main>
-<footer><div class="wrap"><span>© 2026 IneedaGig · Intentional Noise Connect</span><span><a href="artists.html">Artist directory</a> · <a href="free-vs-paid.html">Free vs. paid</a> · <a href="https://intentionalnoise.info/">About us</a> · <a href="https://connect.intentionalnoise.info/">Connect</a> · <a href="https://intentionalnoise.band/">Artist showcases</a> · <a href="https://connect.intentionalnoise.info/auth.html">Sign in</a></span></div></footer>
+<footer><div class="wrap"><span>© 2026 IneedaGig · Intentional Noise Connect</span><span><a href="artists.html">Artist directory</a> · <a href="free-vs-paid.html">Free vs. paid</a> · <a href="https://intentionalnoise.info/privacy.html#sheriff-rights">Privacy &amp; rights</a> · <a href="https://intentionalnoise.info/">About us</a> · <a href="https://connect.intentionalnoise.info/">Connect</a> · <a href="https://intentionalnoise.band/">Artist showcases</a> · <a href="https://connect.intentionalnoise.info/auth.html">Sign in</a></span></div></footer>
 <script>
 (function(){
 'use strict';
