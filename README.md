@@ -1,4 +1,9 @@
-# IneedaGig.net — booking-first network hub\n**Current network checkpoint:** [IN-NET-2026-11-08-SYNC-01](https://github.com/fwjeweler1-droid/connect.intentionalnoise.info/blob/main/NETWORK_SYNC_CHECKPOINT_2026-11-08.md)  \n**Machine-readable multi-repo marker:** [network-sync.json](network-sync.json)\n\n**Four-site profiles:** Musicians and bands register once through Connect, receive private artist drafts, and opt in to public pages. The same approved artist record is displayed on .info, Connect, .band and IneedaGig via their published-profile routes. Venue booking and musician opportunities are advertised here; sensitive workflows remain in Connect.\n
+# IneedaGig.net — booking-first network hub
+**Current network checkpoint:** [IN-NET-2026-11-08-SYNC-01](https://github.com/fwjeweler1-droid/connect.intentionalnoise.info/blob/main/NETWORK_SYNC_CHECKPOINT_2026-11-08.md)  
+**Machine-readable multi-repo marker:** [network-sync.json](network-sync.json)
+
+**Four-site profiles:** Musicians and bands register once through Connect, receive private artist drafts, and opt in to public pages. The same approved artist record is displayed on .info, Connect, .band and IneedaGig via their published-profile routes. Venue booking and musician opportunities are advertised here; sensitive workflows remain in Connect.
+
 
 **Status (checkpoint IN-NET-2026-11-08-SYNC-01):** Repository public; GitHub Pages deployment succeeded and custom-domain DNS check was reported successful. Live real-browser acceptance and booking/signup end-to-end tests are still PENDING. Older paragraphs below are historical design notes; this status supersedes their deployment assumptions.
 
