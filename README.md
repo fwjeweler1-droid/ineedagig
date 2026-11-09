@@ -1,6 +1,6 @@
-# IneedaGig.net — project foundation
+# IneedaGig.net — booking-first network hub\n**Current network checkpoint:** [IN-NET-2026-11-08-SYNC-01](https://github.com/fwjeweler1-droid/connect.intentionalnoise.info/blob/main/NETWORK_SYNC_CHECKPOINT_2026-11-08.md)  \n**Machine-readable multi-repo marker:** [network-sync.json](network-sync.json)\n\n**Four-site profiles:** Musicians and bands register once through Connect, receive private artist drafts, and opt in to public pages. The same approved artist record is displayed on .info, Connect, .band and IneedaGig via their published-profile routes. Venue booking and musician opportunities are advertised here; sensitive workflows remain in Connect.\n
 
-**Status (2026-11-08):** New private repository. Domain recently purchased; DNS/hosting not yet verified. No public launch or functional end-to-end acceptance is claimed.
+**Status (checkpoint IN-NET-2026-11-08-SYNC-01):** Repository public; GitHub Pages deployment succeeded and custom-domain DNS check was reported successful. Live real-browser acceptance and booking/signup end-to-end tests are still PENDING. Older paragraphs below are historical design notes; this status supersedes their deployment assumptions.
 
 ## Role and navigation
 
@@ -38,7 +38,7 @@ Connect reports a connected booking workflow and passing privacy/RLS tests, with
 
 ## Smallest reversible first implementation
 
-A simple branded venue landing page can route to the **existing** Connect booking and musician search URLs. It should not write booking records itself. Do not connect the purchased domain or activate a public launch until its deployment is checked and approved.
+A simple branded venue landing page can route to the **existing** Connect booking and musician search URLs. It should not write booking records itself. The domain has been connected for deployment; do not advertise production readiness until full live acceptance and safety checks are passed.
 
 **Source of truth for live workflows:** `fwjeweler1-droid/connect.intentionalnoise.info` and its existing Supabase project. This README is a coordination note, not a replacement for project records or user approvals.
 
@@ -51,7 +51,7 @@ A simple branded venue landing page can route to the **existing** Connect bookin
 - The official approved Ineeda Gig image is referenced unchanged from the Connect asset URL (no crop, no modification, no re-upload).
 - A publicly open booking can be selected to generate an individual public booking link and prefilled composer links for Facebook, X, Threads, and LinkedIn. The new site does **not** itself write to the booking database and does **not** send social posts to external platforms.
 - The Connect booking page now prepares those same share links after **successful public booking publication**; it also provides a Social links control for existing open booking requests. Unique \`?booking=UUID\` public deep-links resolve and highlight an open booking. If a booking is filled, cancelled, hidden or expired, the public link does not surface a private record.
-- The website retains \`noindex,nofollow\` until deployment and launch readiness are approved. Domain DNS, TLS and hosting remain pending independent verification.
+- The website retains \`noindex,nofollow\` pending launch approval. GitHub Pages deploy and domain DNS setup have been reported successful; live TLS/mobile/browser acceptance remains open.
 
 **Source commits:**
 - IneedaGig booking-first page: \`ff51162e409f4d2a49159391d0100f5b9087984f\`.
