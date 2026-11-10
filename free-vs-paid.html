@@ -34,6 +34,29 @@ header{background:#10261b}.panel{background:linear-gradient(150deg,#244631,#1a30
 .panel-link:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
 .tile-cta{margin:18px 0 0;color:var(--mint);font-weight:800;text-decoration:underline;text-underline-offset:4px}
 @media(prefers-reduced-motion:reduce){.panel-link{transition:none}.panel-link:hover{transform:none}}
+
+/* Froggy + Ineeda: reusable official-character dialogue, no raster edits */
+.dialogue-intro{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:4px 0 23px}
+.dialogue-card{display:flex;align-items:center;gap:15px;padding:17px;border-radius:17px;border:1px solid #719b72;background:linear-gradient(145deg,#244c34,#162e25);box-shadow:0 10px 27px #06160e55;min-width:0;color:var(--cream)}
+.dialogue-card.ineeda{background:linear-gradient(140deg,#56472b,#283b2b);border-color:#b99b61}
+.dialogue-card img{width:38%;max-width:175px;max-height:190px;object-fit:contain;flex:0 0 auto}
+.dialogue-card .speech{min-width:0}
+.dialogue-card .voice{display:block;font-size:.76rem;font-weight:850;text-transform:uppercase;letter-spacing:.13em;color:var(--gold);margin-bottom:6px}
+.dialogue-card h2,.dialogue-card h3{font-size:clamp(1.14rem,2.5vw,1.65rem);line-height:1.23;margin:0 0 9px;color:var(--cream)}
+.dialogue-card p{font-size:.93rem;color:#edf4e7;line-height:1.52;margin:0}
+.dialogue-card .hint{display:block;margin-top:10px;color:#b8f29b;font-weight:800;font-size:.88rem}
+.dialogue-link{text-decoration:none;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+.dialogue-link:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 15px 34px #07180c77}
+.dialogue-link:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.dialogue-outro{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:22px}
+.dialogue-outro .dialogue-card{flex-direction:column;align-items:center;text-align:center;padding:17px 15px;justify-content:flex-start}
+.dialogue-outro .dialogue-card img{width:145px;height:145px;max-width:100%;max-height:145px}
+.dialogue-outro .dialogue-card h3{font-size:1.2rem}
+.dialogue-outro .dialogue-card p{font-size:.91rem}
+@media(max-width:760px){.dialogue-outro{grid-template-columns:1fr 1fr}.dialogue-outro .dialogue-card:first-child{grid-column:1/-1;flex-direction:row;text-align:left}.dialogue-outro .dialogue-card:first-child img{width:32%;height:auto;max-width:160px}.dialogue-intro{grid-template-columns:1fr}.dialogue-card img{width:30%;max-width:155px}}
+@media(max-width:480px){.dialogue-outro{grid-template-columns:1fr}.dialogue-outro .dialogue-card,.dialogue-outro .dialogue-card:first-child{grid-column:auto;flex-direction:row;text-align:left}.dialogue-outro .dialogue-card img,.dialogue-outro .dialogue-card:first-child img{width:31%;height:auto;max-width:120px}.dialogue-card{padding:12px;gap:12px}.dialogue-card h2,.dialogue-card h3{font-size:1.13rem}.dialogue-card p{font-size:.86rem}}
+@media(prefers-reduced-motion:reduce){.dialogue-link{transition:none}.dialogue-link:hover{transform:none}}
+
 </style>
 </head>
 <body>
@@ -42,6 +65,17 @@ header{background:#10261b}.panel{background:linear-gradient(150deg,#244631,#1a30
 <div class="eyebrow">No surprises</div>
 <h1>What's free? What's paid?</h1>
 <p class="intro">Finding people and opportunities is free. You only pay when you choose an outside service or a future optional upgrade.</p>
+
+<section class="dialogue-intro" aria-label="Froggy and Ineeda talk about what's free">
+  <article class="dialogue-card froggy">
+    <img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="Froggy, the official FROG mascot wearing his cowboy hat" loading="eager" decoding="async">
+    <div class="speech"><span class="voice">Froggy asks</span><h2>“What's free, man?”</h2><p>“Ain't nuthin' free!”</p></div>
+  </article>
+  <a class="dialogue-card dialogue-link ineeda" href="https://connect.intentionalnoise.info/" aria-label="Ineeda says everything here is free to connect; open Intentional Noise Connect">
+    <img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="Ineeda Gig, the official venue-booking mascot" loading="eager" decoding="async">
+    <div class="speech"><span class="voice">Ineeda says</span><h2>“Everything here!”</h2><p>Free web presence to show your work and talk to other members. No advertising paywalls or selling your personal information.</p><span class="hint">Touch Ineeda to explore Connect →</span></div>
+  </a>
+</section>
 <div class="cols">
 <a class="panel panel-link" href="https://connect.intentionalnoise.info/" aria-labelledby="free-title" aria-label="Free to connect — open Intentional Noise Connect">
 <h2 id="free-title"><span>Free</span> to connect</h2>
@@ -64,6 +98,21 @@ header{background:#10261b}.panel{background:linear-gradient(150deg,#244631,#1a30
 </ul>
 </section>
 </div>
+
+<section class="dialogue-outro" aria-label="Privacy rights and optional costs">
+  <a class="dialogue-card dialogue-link froggy" href="https://intentionalnoise.info/privacy.html" aria-label="Sheriff Froggy explains privacy rights; read the privacy statement">
+    <img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="Froggy, speaking about your privacy rights" loading="lazy" decoding="async">
+    <div class="speech"><span class="voice">Sheriff Froggy says</span><h3>“Your rights to privacy are…”</h3><p>We don't save any personal information on our site for distribution in ANY form.</p><span class="hint">Touch for the privacy statement →</span></div>
+  </a>
+  <a class="dialogue-card dialogue-link ineeda" href="#paid-title" aria-label="Ineeda explains which optional outside services might cost money">
+    <img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="Ineeda Gig" loading="lazy" decoding="async">
+    <div class="speech"><span class="voice">Ineeda says</span><h3>“Here's what might cost you.”</h3><p>Optional storage or extra outside services you decide to use.</p><span class="hint">See possible costs ↑</span></div>
+  </a>
+  <a class="dialogue-card dialogue-link froggy" href="#free-title" aria-label="Froggy points to what's free on Intentional Noise Connect">
+    <img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="Froggy, the official FROG mascot" loading="lazy" decoding="async">
+    <div class="speech"><span class="voice">Froggy says</span><h3>“Here's what won't.”</h3><p>Your basic profile, five work previews and a way to find musicians and gigs.</p><span class="hint">See what's free ↑</span></div>
+  </a>
+</section>
 <p class="note">We don't save personal information for distribution in any form. Third-party services handle account authentication. See <a href="https://intentionalnoise.info/privacy.html">our privacy information</a>.</p>
 <p class="note"><strong>No paid Connect plan or checkout is active today.</strong> Nothing upgrades automatically. Any future fee must be shown and accepted before you're charged. Artists and event organizers agree on performance fees directly.</p>
 <div class="actions"><a href="https://connect.intentionalnoise.info/auth.html?role=musician">Create a free profile</a><a href="https://connect.intentionalnoise.info/media-storage.html">Explore storage choices</a><a href="./#book">IneedaGig home</a></div>
