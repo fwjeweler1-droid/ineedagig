@@ -1,398 +1,50 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#10242d">
-<meta name="robots" content="noindex,nofollow">
-<meta name="description" content="IneedaGig helps venues find musicians and bands, and helps artists discover live booking opportunities. Powered by Intentional Noise Connect.">
-<title>IneedaGig — Book the Music. Fill the Room.</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102c21">
+<meta name="description" content="IneedaGig: find live music opportunities or hire musicians and bands. Two simple paths.">
+<title>IneedaGig — Find a gig. Find entertainment.</title>
 <style>
-:root{--bg:#0f202a;--deep:#0b1821;--card:#172e39;--card2:#1e3641;--border:#42606b;--mint:#7ce1d9;--gold:#f1c783;--cream:#fff6e8;--muted:#bed0d5;color-scheme:dark;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--cream);background:radial-gradient(ellipse at 95% 2%,#22494a 0%,transparent 35%),var(--bg)}
-a{color:inherit}button,input{font:inherit}button,a{touch-action:manipulation}
-.wrap{width:min(1160px,calc(100% - 38px));margin-inline:auto}
-header{background:rgba(12,29,37,.96);border-bottom:1px solid #36545d}
-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:80px}
-.logo{text-decoration:none;font-size:1.55rem;letter-spacing:-.065em;font-weight:900;white-space:nowrap}
-.logo b{color:var(--gold)}.logo small{display:block;letter-spacing:.07em;text-transform:uppercase;font-size:.61rem;font-weight:700;color:#afcece}
-.navlinks{display:flex;align-items:center;gap:20px;flex-wrap:wrap;font-size:.92rem}
-.navlinks a{text-decoration:none;color:#dbe8e9}.navlinks a:hover{text-decoration:underline}
-.btn,button{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:8px;text-decoration:none;font-weight:780;cursor:pointer;border:1px solid var(--gold);border-radius:10px;min-height:47px;padding:11px 17px;background:var(--gold);color:#16242b}
-.btn:hover,button:hover{filter:brightness(1.09)}.btn.alt,button.alt{background:transparent;border-color:#779ba3;color:var(--cream)}
-.btn.mint,button.mint{background:var(--mint);color:#102329;border-color:var(--mint)}
-:focus-visible{outline:3px solid #a4fff6;outline-offset:3px}
-.hero{display:grid;grid-template-columns:1.25fr minmax(300px,.75fr);align-items:center;gap:clamp(25px,5vw,72px);padding:58px 0 58px}
-.eyebrow{font-weight:850;font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold)}
-h1{font-size:clamp(2.8rem,6vw,5.4rem);letter-spacing:-.07em;line-height:1.02;margin:17px 0 20px}
-h1 span{color:var(--mint)}h2{font-size:clamp(1.8rem,3.3vw,2.7rem);line-height:1.12;letter-spacing:-.035em;margin:8px 0 14px}
-h3{font-size:1.14rem;margin:0 0 10px}p{line-height:1.65}.lead{font-size:1.18rem;max-width:640px;color:#d0ddde}
-.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin:27px 0 20px}
-.micro{font-size:.83rem;color:var(--muted)}.micro strong{color:var(--gold)}
-.mascot-frame{background:linear-gradient(145deg,#274148,#182934);border:1px solid #48696c;border-radius:24px;padding:15px;box-shadow:0 28px 55px #06151cb3}
-.mascot-frame img{width:100%;height:auto;display:block;object-fit:contain;border-radius:14px}
-.mascot-frame p{font-size:.87rem;text-align:center;color:#c9dedd;margin:13px 0 2px}
-.focus{border-block:1px solid #32515b;background:#102733}
-.booking-roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px;padding:22px 0 8px}
-.choice-entry{padding:44px 0 23px}
-.choice-entry h1{margin:10px 0 12px;font-size:clamp(2.5rem,5.6vw,4.8rem)}
-.choice-entry > .lead{margin:0;max-width:100%}
-.choice-option{min-width:0}
-.choice{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:330px;text-decoration:none;padding:20px;overflow:hidden;transition:border-color .15s ease,transform .15s ease,box-shadow .15s ease}
-.choice:hover{transform:translateY(-2px);border-color:var(--mint);box-shadow:0 12px 28px #06151c77}
-.choice-art{display:flex;align-items:center;justify-content:center;width:100%;height:245px;min-width:0}
-.choice-art img{display:block;max-width:100%;max-height:100%;height:100%;width:100%;object-fit:contain}
-.choice-title{display:block;text-align:center;font-weight:850;font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.15;letter-spacing:-.035em;color:var(--cream);margin-top:8px}
-.choice-below{text-align:center;padding:12px 15px 4px}
-.choice-below p{margin:0 0 7px;color:var(--muted);font-size:.95rem;line-height:1.55}
-.choice-below a{color:var(--mint);text-decoration:underline;text-underline-offset:4px;font-size:.94rem;font-weight:650;line-height:1.9}
-.choice-below a:hover{color:var(--cream)}
-.link-dot{color:var(--muted);padding:0 7px}
-.choice-footnote{font-size:.83rem;color:var(--muted);margin:14px 0 0;text-align:center}
-.mint-ink{color:var(--mint)}
-.story{display:block;max-width:840px;text-align:center;padding:40px 0}.story .lead{max-width:unset}
-.role{background:var(--card);border:1px solid var(--border);border-radius:17px;padding:26px;min-width:0}
-.role:first-child{border-color:#b49362}
-.role .kicker{font-size:.79rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:800}
-.role p{color:var(--muted)}.role .btn{margin-top:9px}
-section{scroll-margin-top:24px}.section-pad{padding:58px 0}
-.row-head{display:flex;align-items:end;justify-content:space-between;gap:15px;flex-wrap:wrap}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-.step{background:#162d39;border:1px solid var(--border);border-radius:15px;padding:21px}
-.step .n{font-weight:850;color:var(--mint);font-size:.79rem;letter-spacing:.15em}
-.step p{color:var(--muted);font-size:.94rem;margin-bottom:0}
-.finder{background:#102630;border-block:1px solid #34525e}
-.searchbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:20px 0}
-input[type=search]{background:#0c1e27;border:1px solid #7895a0;color:white;border-radius:9px;padding:13px 15px;min-height:46px;flex:1 1 260px}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:18px 0}
-.listing{padding:20px;border-radius:15px;border:1px solid #496572;background:#1a303b;display:flex;flex-direction:column;gap:10px;min-width:0}
-.listing h3{overflow-wrap:anywhere;margin:0}.listing .subtitle{color:var(--muted);font-size:.88rem;margin:0}
-.tag{font-size:.72rem;font-weight:850;color:#0e2c31;background:var(--mint);border-radius:99px;padding:5px 10px;align-self:flex-start}
-.listing .spec{color:#e7eff0;font-size:.93rem;margin:0}.listing .actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto;padding-top:9px}
-.listing .actions .btn,.listing .actions button{min-height:41px;font-size:.85rem;padding:9px 12px}
-.empty{padding:20px;background:#18333f;border:1px solid #4d6a73;border-radius:13px;color:#d6e4e7}
-#featured{margin:18px 0;border:1px solid #c6a46c;background:#223844;border-radius:15px;padding:20px}
-#featured .listing{max-width:650px}
-.hub{display:grid;grid-template-columns:.75fr 1.25fr;gap:25px;align-items:start}
-.hub-copy p{color:var(--muted)}
-.hub-card{border:1px solid #53717a;background:#182d37;border-radius:18px;padding:24px}
-.status{color:#b7ffeb;font-size:.9rem;min-height:1.2em;white-space:pre-wrap}
-.share-actions{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
-.share-actions button{font-size:.9rem;min-height:43px}
-.share-preview{background:#0d222b;border:1px solid #56757c;padding:15px;border-radius:10px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.93rem;line-height:1.5}
-.detail{font-size:.84rem;color:#c5d8db}
-footer{padding:30px 0;border-top:1px solid #37525c;color:#aec7ce}
-footer .wrap{display:flex;gap:15px;justify-content:space-between;flex-wrap:wrap}
-footer a{color:var(--mint)}
-[hidden]{display:none!important}
-@media(max-width:950px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr minmax(230px,.65fr);gap:20px}.hub{grid-template-columns:1fr}}
-@media(max-width:710px){nav{align-items:flex-start;padding:17px 0;flex-direction:column}.navlinks{gap:14px}.hero{grid-template-columns:1fr;padding:36px 0}.steps,.cards{grid-template-columns:1fr}#member-requests .booking-roles{grid-template-columns:1fr}.section-pad{padding:40px 0}h1{font-size:clamp(2.7rem,11vw,4.2rem)}.role{padding:22px}.focus .booking-roles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.choice-entry{padding:27px 0 19px}.choice-entry h1{font-size:clamp(2.1rem,7vw,3.2rem)}.choice{min-height:220px;padding:9px}.choice-art{height:145px}.choice-title{font-size:clamp(1rem,3.6vw,1.35rem);margin-top:9px}.choice-below{padding:10px 3px 0}.choice-below p{font-size:.77rem;line-height:1.45}.choice-below a{font-size:.79rem;line-height:1.55}.link-dot{padding:0 3px}.choice-footnote{line-height:1.45}}
-@media(max-width:360px){.focus .booking-roles{gap:7px}.choice{min-height:190px;padding:7px}.choice-art{height:120px}.choice-title{font-size:1rem}.choice-below a{font-size:.75rem}}
-@media(prefers-reduced-motion:reduce){.choice{transition:none}.choice:hover{transform:none}}
-
-/* IneedaGig mascot-led forest-and-gold theme — visual only */
-:root{--bg:#101e1a;--deep:#0b1713;--card:#1b3028;--card2:#254035;--border:#527561;--mint:#a9e58a;--gold:#efc56f;--cream:#fff8e9;--muted:#d2dfd1}
-body{background:radial-gradient(ellipse at 86% 0%,#356c43 0%,transparent 40%),radial-gradient(ellipse at 0% 45%,#244c3b 0%,transparent 46%),var(--bg)}
-header{background:rgba(12,31,23,.97);border-bottom-color:#4b7356}
-.navlinks a{color:#e5f1e1}.btn,button{color:#1b281d}.btn.alt,button.alt{border-color:#92ae91}
-.btn.mint,button.mint{color:#14281a}
-.focus{background:linear-gradient(145deg,#183f2e,#132b24);border-color:#486d4e}
-.choice{background:linear-gradient(150deg,#274f38,#1a362b);border-color:#72956b;box-shadow:0 8px 28px #05120b55}
-.choice-option:nth-child(2) .choice{background:linear-gradient(150deg,#53452d,#2a3927);border-color:#b99759}
-.choice:hover{border-color:var(--gold);box-shadow:0 14px 30px #06180d99}
-.choice-art img{filter:drop-shadow(0 10px 12px #06150b55)}
-.role,.step,.listing,.hub-card{background:#1b3429;border-color:#51775d}
-.finder{background:#142c23;border-color:#45674c}
-input[type=search]{background:#10251c;border-color:#83a38b}
-.empty,.share-preview{background:#1c3a2d;border-color:#527761}
-#featured{background:#2b3d2b;border-color:var(--gold)}
-footer{border-color:#48694f}.lead{color:#e0e9dc}
-.mascot-conversation{padding:48px 0 58px;border-top:1px solid #547450}
-.mascot-conversation .conversation-intro{text-align:center;max-width:740px;margin:0 auto 24px}
-.conversation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.speech-card{display:flex;align-items:center;gap:18px;padding:18px;background:linear-gradient(155deg,#254a34,#172e25);border:1px solid #719b72;border-radius:21px;min-width:0;box-shadow:0 12px 32px #09150c55}
-.speech-card.ineeda{background:linear-gradient(155deg,#4d452b,#283b29);border-color:#b99b61}
-.speech-card img{width:32%;max-width:160px;aspect-ratio:1;object-fit:contain;flex:none}
-.speech-card .voice{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:800}
-.speech-card h3{font-size:clamp(1.1rem,2.4vw,1.6rem);line-height:1.23;margin:7px 0 9px}
-.speech-card p{margin:0 0 10px;color:#e0e8dd;font-size:.94rem}
-.speech-card a{color:#c5f5aa;font-weight:750;text-underline-offset:4px}
-.speech-card .privacy-text{font-size:.91rem}
-@media(max-width:750px){.conversation-grid{grid-template-columns:1fr}.speech-card img{width:29%}.mascot-conversation{padding:36px 0}}
-@media(max-width:430px){.speech-card{gap:12px;padding:12px}.speech-card img{width:30%}.speech-card h3{font-size:1.08rem}.speech-card p{font-size:.83rem}}
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;--bg:#10281e;--mint:#b5e59d;--gold:#f1c783;--cream:#fff9ed;--border:#769b78}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100svh;display:flex;flex-direction:column;background:radial-gradient(ellipse at 85% 20%,#285a40 0%,transparent 55%),var(--bg);color:var(--cream)}
+.wrap{width:min(1000px,calc(100% - 32px));margin-inline:auto}
+header{border-bottom:1px solid #53775a}header .wrap{padding:16px 0}.logo{font-size:1.55rem;letter-spacing:-.06em;font-weight:900;color:var(--cream);text-decoration:none}.logo b{color:var(--gold)}
+main{width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:30px 0 42px}
+h1{font-size:clamp(1.85rem,5vw,3.5rem);line-height:1.1;text-align:center;letter-spacing:-.04em;margin:12px 0 26px}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:880px;margin:auto}
+.choice{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;min-height:310px;padding:18px 16px;gap:14px;background:linear-gradient(155deg,#284e37,#1b382a);border:2px solid #8eb182;border-radius:20px;color:var(--cream);text-decoration:none;text-align:center;box-shadow:0 10px 35px #05170b55}
+.choice.hiring{background:linear-gradient(155deg,#58482d,#2d402c);border-color:#bca16c}
+.choice img{display:block;max-width:100%;width:220px;height:220px;object-fit:contain}
+.choice span{font-size:clamp(1.17rem,3vw,1.8rem);font-weight:850;line-height:1.2}
+.choice:hover{border-color:var(--gold);background-color:#30583d}
+.choice:focus-visible,.logo:focus-visible,footer a:focus-visible{outline:3px solid #c2ffb2;outline-offset:4px}
+footer{border-top:1px solid #52745b;padding:16px 0;color:#c9d9c7;font-size:.86rem}footer .wrap{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}footer a{color:#d5efcd}
+@media(max-width:650px){header .wrap{padding:12px 0}.logo{font-size:1.4rem}main{padding:14px 0 26px;align-items:flex-start}h1{font-size:clamp(1.75rem,7.5vw,2.5rem);margin:12px 0 22px}.choices{grid-template-columns:1fr;gap:14px}.choice{flex-direction:row;justify-content:flex-start;text-align:left;min-height:126px;padding:12px 16px;gap:14px;border-radius:16px}.choice img{width:104px;height:104px;flex:none}.choice span{font-size:clamp(1.16rem,5vw,1.42rem)}}
+@media(max-width:360px){.choice{min-height:106px}.choice img{width:84px;height:84px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header>
- <nav class="wrap" aria-label="Main navigation">
-  <a class="logo" href="./">Ineeda<b>Gig</b><small>Part of Intentional Noise Connect</small></a>
-  <div class="navlinks">
-   <a href="#book">Book talent</a><a href="artists.html">Musician profiles</a><a href="#opportunities">Venue bookings</a><a href="regional-opportunities.html">Find gigs nationwide</a><a href="external-performers.html">Find talent nationwide</a><a href="#member-requests">Member gig requests</a><a href="#social">Social reach</a><a href="https://intentionalnoise.info/privacy.html">Privacy</a>
-   <a href="https://connect.intentionalnoise.info/auth.html?role=musician">Sign up / My Connect account</a>
-  </div>
- </nav>
-</header>
-<main>
-<div class="focus" id="book">
- <section class="wrap choice-entry" aria-labelledby="choice-title">
-  <div class="eyebrow">IneedaGig · Free to get started</div>
-  <h1 id="choice-title">Need a gig? <span>Need talent?</span></h1>
-  <p class="lead">Two simple paths. Choose the one that fits you.</p>
-  <div class="booking-roles" aria-label="Choose how to get started">
-   <div class="choice-option">
-    <a class="role choice" href="https://connect.intentionalnoise.info/auth.html?role=musician" aria-label="I'm a musician — create my free Connect profile">
-     <span class="choice-art"><img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="Froggy, the official Intentional Noise mascot" loading="eager" decoding="async" width="900" height="900"></span>
-     <span class="choice-title">I'm a musician</span>
-    </a>
-    <div class="choice-below">
-     <p>Musicians, bands, artists and creators: make your free profile and find your people.</p>
-     <a href="https://connect.intentionalnoise.info/auth.html?role=musician">Create my free profile</a> <span class="link-dot" aria-hidden="true">·</span> <a href="#opportunities">See available gigs</a>
-    </div>
-   </div>
-   <div class="choice-option">
-    <a class="role choice" href="https://connect.intentionalnoise.info/fill-my-stage.html" aria-label="I'm hiring for an event — post a booking request">
-     <span class="choice-art"><img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="Ineeda Gig, the approved booking mascot" loading="eager" decoding="async" width="1254" height="1254"></span>
-     <span class="choice-title">I'm hiring for an event</span>
-    </a>
-    <div class="choice-below">
-     <p>Book performers for a venue, party, wedding, festival or special event.</p>
-     <a href="https://connect.intentionalnoise.info/fill-my-stage.html">Post my event request</a> <span class="link-dot" aria-hidden="true">·</span> <a href="artists.html">Browse artists</a>
-    </div>
-   </div>
-  </div>
-    <p class="choice-footnote">One free Connect account powers your profile or event requests. Posting a request is not a confirmed booking or contract. <a href="free-vs-paid.html">What's free? What costs extra?</a></p>
- </section>
-</div>
-
-<section class="wrap mascot-conversation" id="whats-free" aria-labelledby="whats-free-title">
- <div class="conversation-intro">
-  <div class="eyebrow">Froggy &amp; Ineeda explain</div>
-  <h2 id="whats-free-title">What's free around here?</h2>
-  <p class="lead">Meet the faces of IneedaGig. Their conversation leads you through the free basics, privacy information, and possible outside costs.</p>
- </div>
- <div class="conversation-grid">
-  <article class="speech-card">
-   <img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="Froggy" loading="lazy">
-   <div><div class="voice">Froggy asks</div><h3>“What's free, man?”</h3><p>“Ain't nuthin' free!”</p></div>
-  </article>
-  <article class="speech-card ineeda">
-   <img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="Ineeda Gig" loading="lazy">
-   <div><div class="voice">Ineeda says</div><h3>“Everything here!”</h3><p>Free web presence to show your work and connect with people. See what's included.</p><a href="free-vs-paid.html">See the free features</a></div>
-  </article>
-  <article class="speech-card">
-   <img src="https://intentionalnoise.info/assets/frog-sheriff-privacy-rights.webp" alt="Sheriff Froggy pointing at his privacy rights clipboard" loading="lazy" width="1254" height="1254">
-   <div><div class="voice">Sheriff Froggy says</div><h3>“YOUR RIGHTS TO PRIVACY ARE…”</h3><p class="privacy-text">We don't save any personal information on our site for distribution in ANY form. A third-party provider handles account authentication.</p><a href="https://intentionalnoise.info/privacy.html">Read our privacy information</a> · <a href="https://intentionalnoise.info/principles.html">Community principles</a></div>
-  </article>
-  <article class="speech-card ineeda">
-   <img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="Ineeda Gig" loading="lazy">
-   <div><div class="voice">Ineeda says</div><h3>“Here's what might cost you.”</h3><p>Optional third-party storage and services can have their own charges. Nothing upgrades automatically.</p><a href="free-vs-paid.html#paid-title">See possible costs</a></div>
-  </article>
-  <article class="speech-card">
-   <img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="Froggy" loading="lazy">
-   <div><div class="voice">Sheriff Froggy says</div><h3>“Here's what won't.”</h3><p>Your basic profile, five work previews, and access to discover opportunities.</p><a href="free-vs-paid.html#free-title">See what's included</a></div>
-  </article>
- </div>
-</section>
-<section class="wrap hero story" aria-label="About IneedaGig">
- <div>
-  <div class="eyebrow">For real stages and real performers</div>
-  <h2>Fill the stage. <span class="mint-ink">Find the sound.</span></h2>
-  <p class="lead">IneedaGig is your easy-to-remember front door to Intentional Noise Connect. One account, one connected community, and direct conversations between the people making music happen.</p>
-  <p class="micro"><strong>Artists:</strong> Your profile starts private. You decide when to publish across the connected sites.</p>
- </div>
-</section>
-<section class="wrap section-pad" aria-labelledby="how-title">
- <div class="eyebrow">Booking, without the runaround</div><h2 id="how-title">From empty stage to first song.</h2>
- <div class="steps">
-  <article class="step"><div class="n">01 / THE OFFER</div><h3>Post the opportunity</h3><p>Choose the act, date, place and pay. Preview the details; save as a private draft or publish.</p></article>
-  <article class="step"><div class="n">02 / THE CONVERSATION</div><h3>Musicians come to you</h3><p>Qualified Connect members respond. Have individual private conversations, compare options and shortlist.</p></article>
-  <article class="step"><div class="n">03 / THE DECISION</div><h3>Make your arrangement</h3><p>Agree on terms directly, then mark the opening filled so musicians know it's no longer available.</p></article>
- </div>
-</section>
-<section class="finder section-pad" id="opportunities" aria-labelledby="opportunities-title">
- <div class="wrap">
-  <div class="row-head">
-   <div><div class="eyebrow">Live opportunities from Connect</div><h2 id="opportunities-title">Stages looking for musicians</h2></div>
-   <a class="btn alt" href="#member-requests">Also see member gig requests</a>
-  </div>
-  <p class="detail">Showing only publicly open future venue requests. Private drafts, applicant messages and personal contact details do not appear here.</p>
-  <div id="featured" hidden aria-live="polite">
-   <strong>Shared opportunity</strong><div id="featuredCard"></div>
-  </div>
-  <div class="searchbar">
-   <input type="search" id="filter" maxlength="100" placeholder="Filter by city, venue, style or act" aria-label="Filter available bookings">
-   <button id="refresh" class="alt" type="button">Refresh openings</button>
-  </div>
-  <p id="feedStatus" class="status" role="status" aria-live="polite">Checking current opportunities…</p>
-  <div id="bookingCards" class="cards"></div>
- </div>
- <section class="wrap section-pad" id="regional" aria-labelledby="regional-title">
-  <div class="eyebrow">Auditions · Festivals · Outside opportunities</div>
-  <h2 id="regional-title">Opportunities Beyond the Swamp 🐸</h2>
-  <p class="lead">Browse 2027 festival and audition calls plus ongoing venue submission opportunities from across the United States. Every entry links to the original organizer; none is a confirmed booking.</p>
-  <a class="btn mint" href="regional-opportunities.html">Explore nationwide opportunities</a>
-  <p class="micro">Nothing is automatically published or applied for. Organizer invitations and listing approvals stay under human review.</p>
- </section>
-
-<section class="wrap section-pad" id="external-performers" aria-labelledby="external-performers-title">
- <div class="eyebrow">Nationwide musicians · Bands · Booking sources</div>
- <h2 id="external-performers-title">Artists Beyond the Swamp 🐸</h2>
- <p class="lead">Discover musicians and bands publicly accepting professional booking inquiries from across the country. Search 49 outside performer sources by home area, musical style and lineup. These are external acts, not Connect members unless they independently join and publish their own profile.</p>
- <a class="btn mint" href="external-performers.html">Browse nationwide musicians</a>
- <p class="micro">Visit each performer's original booking page to ask about dates. No availability, endorsements or bookings are implied.</p>
-</section>
-<section class="wrap section-pad" id="member-requests" aria-labelledby="member-requests-title">
- <div class="eyebrow">Auditions · Band openings · Music work</div>
- <h2 id="member-requests-title">Member gig requests</h2>
- <p class="lead">Looking for a guitarist, drummer, vocalist, sound engineer or a substitute player? The Connect members' request board is the home for those opportunities. Only signed-in members can read or post those requests.</p>
- <div class="booking-roles" style="padding:5px 0 10px">
-  <article class="role">
-   <div class="kicker">Musicians looking for work</div>
-   <h3>Find member-only openings</h3>
-   <p>See band positions, auditions, performance openings and other music-work requests from the Connect community.</p>
-   <a class="btn mint" id="memberBrowse" href="https://connect.intentionalnoise.info/gig-requests.html">Sign in to browse member requests</a>
-  </article>
-  <article class="role">
-   <div class="kicker">Bands and members hiring</div>
-   <h3>Post a member request</h3>
-   <p>Post a band vacancy or music-work request in the existing Connect members' board. It uses your Connect account, not a new IneedaGig registration.</p>
-   <a class="btn" href="https://connect.intentionalnoise.info/auth.html?role=musician&amp;next=%2Fgig-requests.html">Create account / Post request</a>
-  </article>
- </div>
- <p class="micro"><a href="https://connect.intentionalnoise.info/auth.html?role=musician">Musicians: join once before posting or responding</a>. Your published profile appears across IntentionalNoise.info, Connect, IntentionalNoise.band and IneedaGig. One booking hub, two kinds of opportunities. Venue offers are public above; member gig requests retain Connect's member-only privacy rules. Private messages stay on Connect.</p>
-</section>
-<section class="wrap section-pad hub" id="social" aria-labelledby="social-title">
- <div class="hub-copy">
-  <div class="eyebrow">Behind the bookings</div>
-  <h2 id="social-title">One booking.<br>Ready-to-share links.</h2>
-  <p>As soon as a request is <strong>publicly published</strong>, its own shareable listing link can be prepared for social channels. Bring attention to the gig without retyping the details for every account.</p>
-  <p class="detail">This first version opens social posting windows for you to review and submit. Direct, unattended posting to linked accounts needs separate platform authorization and approval; no social accounts are connected yet.</p>
- </div>
- <div class="hub-card">
-  <div class="eyebrow">Booking social hub</div>
-  <h3 id="shareHeading">Choose a published booking</h3>
-  <p id="shareHelp" class="detail">Use a Share button on any open opportunity above. Links are never made for private drafts or filled requests.</p>
-  <div id="shareTool" hidden>
-   <div id="shareText" class="share-preview" aria-label="Prepared social post"></div>
-   <div class="share-actions">
-    <button type="button" id="copyLink" class="mint">Copy booking link</button>
-    <button type="button" id="copyPost" class="alt">Copy caption + link</button>
-    <button type="button" id="nativeShare" class="alt" hidden>Share on phone</button>
-   </div>
-   <div class="share-actions">
-    <button type="button" data-platform="facebook" class="alt">Facebook</button>
-    <button type="button" data-platform="x" class="alt">X</button>
-    <button type="button" data-platform="threads" class="alt">Threads</button>
-    <button type="button" data-platform="linkedin" class="alt">LinkedIn</button>
-   </div>
-   <p id="shareStatus" class="status" role="status"></p>
-  </div>
-  <p class="detail">No automatic external posts are sent. Nothing is shared without opening a social app and choosing to post.</p>
- </div>
-</section>
-</main>
-<footer><div class="wrap"><span>© 2026 IneedaGig · Intentional Noise Connect</span><span><a href="artists.html">Artist directory</a> · <a href="free-vs-paid.html">Free vs. paid</a> · <a href="https://intentionalnoise.info/privacy.html">Privacy</a> · <a href="https://intentionalnoise.info/">About us</a> · <a href="https://connect.intentionalnoise.info/">Connect</a> · <a href="https://intentionalnoise.band/">Artist showcases</a> · <a href="https://connect.intentionalnoise.info/auth.html">Sign in</a></span></div></footer>
+<header><div class="wrap"><a class="logo" href="./" aria-label="IneedaGig home">Ineeda<b>Gig</b></a></div></header>
+<main id="book"><div class="wrap">
+<h1>What are you looking for?</h1>
+<nav class="choices" aria-label="Choose your path">
+<a class="choice" href="musicians.html"><img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="" loading="eager" width="900" height="900"><span>I'm an artist / musician</span></a>
+<a class="choice hiring" href="venues.html"><img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="" loading="eager" width="1254" height="1254"><span>I'm hiring</span></a>
+</nav>
+</div></main>
+<footer><div class="wrap"><a href="free-vs-paid.html">What's free?</a><a href="https://intentionalnoise.info/privacy.html">Privacy</a></div></footer>
 <script>
+// Preserve links shared from older IneedaGig pages without placing those sections on the homepage.
 (function(){
-'use strict';
-const API='https://xyudcdgjyormlokwhfoi.supabase.co/rest/v1/venue_booking_requests';
-const KEY='sb_publishable_-gMviWXPBzov-2D-htf9iA_y6ZVV-q0';
-const CONNECT='https://connect.intentionalnoise.info/fill-my-stage.html';
-const PUBLIC_HOME='https://ineedagig.net/';
-const $=id=>document.getElementById(id);
-let rows=[],selected=null;
-function dateKey(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
-function dateText(s){const d=new Date(s+'T12:00:00');return isNaN(d.getTime())?s:d.toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'})}
-function money(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(Number(n))}
-function budget(b){return b.budget_kind==='quotes'?'Quotes welcome':b.budget_kind==='fixed'?(money(b.budget_min)+' offer'):(money(b.budget_min)+'–'+money(b.budget_max)+' budget')}
-const actNames={band:'Band',solo:'Solo musician',duo:'Duo',trio:'Trio',any:'Open to suggestions'};
-function offerUrl(id){return PUBLIC_HOME+'?booking='+encodeURIComponent(id)+'#opportunities'}
-function respondUrl(id){return CONNECT+'?booking='+encodeURIComponent(id)+'#openRequests'}
-function textElement(tag,value,cls){const el=document.createElement(tag);el.textContent=value;if(cls)el.className=cls;return el}
-function createCard(b){
- const card=document.createElement('article');card.className='listing';
- card.append(textElement('span','OPEN · '+dateText(b.event_date),'tag'));
- card.append(textElement('h3',b.venue_name+' · '+(actNames[b.act_type]||'Live music')));
- card.append(textElement('p',[b.city,b.region,b.country].filter(Boolean).join(', '),'subtitle'));
- card.append(textElement('p',(b.genre||'Music style open')+' · '+budget(b),'spec'));
- const actions=textElement('div','','actions');
- const a=textElement('a','View & respond','btn');a.href=respondUrl(b.id);actions.append(a);
- const share=textElement('button','Share this gig','alt');share.type='button';share.addEventListener('click',()=>selectOffer(b));actions.append(share);
- card.append(actions);return card;
-}
-function render(){
- const root=$('bookingCards');root.replaceChildren();
- const q=$('filter').value.toLowerCase().trim();
- const list=rows.filter(b=>[b.venue_name,b.city,b.region,b.country,b.genre,b.act_type].filter(Boolean).join(' ').toLowerCase().includes(q));
- for(const row of list)root.append(createCard(row));
- $('feedStatus').textContent=list.length?list.length+' current public opening'+(list.length===1?'':'s')+' shown.':'No matching public openings. Try another city or check back later.';
-}
-async function getOpen(id){
- const query=new URLSearchParams({select:'id,venue_name,act_type,genre,event_date,city,region,country,budget_kind,budget_min,budget_max',status:'eq.open',event_date:'gte.'+dateKey(),order:'event_date.asc',limit:'24'});
- if(id){query.delete('order');query.delete('limit');query.set('id','eq.'+id);query.set('limit','1')}
- const response=await fetch(API+'?'+query.toString(),{headers:{apikey:KEY,Accept:'application/json'},cache:'no-store'});
- if(!response.ok)throw Error('Could not retrieve public booking listings ('+response.status+').');
- const data=await response.json();
- if(!Array.isArray(data))throw Error('Unexpected booking response.');
- return data;
-}
-function selectOffer(b){
- selected=b;
- $('shareHeading').textContent='Share: '+b.venue_name;
- const caption='Booking opportunity: '+b.venue_name+' needs '+(actNames[b.act_type]||'live music')+' in '+[b.city,b.region].filter(Boolean).join(', ')+' on '+dateText(b.event_date)+'. '+budget(b)+'.';
- $('shareText').textContent=caption+'\n'+offerUrl(b.id);
- $('shareTool').hidden=false;
- $('shareHelp').textContent='This booking is publicly open. Choose a platform to review the prepared post.';
- $('shareStatus').textContent='';
- $('social').scrollIntoView({behavior:'smooth',block:'start'});
-}
-async function focusShared(){
- const id=new URLSearchParams(location.search).get('booking')||'';
- if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id))return;
- try{
-  const found=await getOpen(id);
-  if(!found.length){$('featured').hidden=false;$('featuredCard').replaceChildren(textElement('p','This booking is not publicly open. It may have been filled, hidden, cancelled or removed.','detail'));return}
-  const b=found[0];
-  $('featuredCard').replaceChildren(createCard(b));
-  $('featured').hidden=false;selectOffer(b);
-  $('featured').scrollIntoView({behavior:'smooth',block:'start'});
- }catch(e){$('featured').hidden=false;$('featuredCard').replaceChildren(textElement('p','Could not verify the shared booking. '+e.message,'detail'))}
-}
-async function load(){
- $('refresh').disabled=true;$('feedStatus').textContent='Loading public booking offers…';
- try{rows=await getOpen();render()}catch(e){$('feedStatus').textContent='Booking feed is unavailable right now. Use the Connect listing link above. '+e.message}
- finally{$('refresh').disabled=false}
-}
-async function copy(text){
- if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);return}
- const el=document.createElement('textarea');el.value=text;el.style.position='fixed';el.style.opacity='0';document.body.append(el);el.select();
- const ok=document.execCommand('copy');el.remove();if(!ok)throw Error('Clipboard access unavailable.');
-}
-$('copyLink').addEventListener('click',async()=>{if(!selected)return;try{await copy(offerUrl(selected.id));$('shareStatus').textContent='Public booking link copied.'}catch(e){$('shareStatus').textContent=e.message}});
-$('copyPost').addEventListener('click',async()=>{if(!selected)return;try{await copy($('shareText').textContent);$('shareStatus').textContent='Caption and booking link copied.'}catch(e){$('shareStatus').textContent=e.message}});
-if(typeof navigator.share==='function'){$('nativeShare').hidden=false;$('nativeShare').addEventListener('click',()=>{if(!selected)return;navigator.share({title:'Booking opportunity: '+selected.venue_name,text:'Live music opening in '+selected.city,url:offerUrl(selected.id)}).catch(()=>{})})}
-document.querySelectorAll('[data-platform]').forEach(btn=>btn.addEventListener('click',()=>{
- if(!selected)return;
- const url=offerUrl(selected.id),body=$('shareText').textContent.split('\n')[0],platform=btn.dataset.platform;
- const e=encodeURIComponent;
- const urls={
-  facebook:'https://www.facebook.com/sharer/sharer.php?u='+e(url),
-  x:'https://twitter.com/intent/tweet?text='+e(body)+'&url='+e(url),
-  threads:'https://www.threads.com/intent/post?text='+e(body+' '+url),
-  linkedin:'https://www.linkedin.com/sharing/share-offsite/?url='+e(url)
- };
- if(urls[platform])window.open(urls[platform],'_blank','noopener,noreferrer');
- $('shareStatus').textContent='Opened '+platform+' composer. You choose whether to publish.';
-}));
-$('filter').addEventListener('input',render);
-$('refresh').addEventListener('click',load);
-const memberKeyword=(new URLSearchParams(location.search).get('q')||'').slice(0,100);
-if(memberKeyword){
- $('memberBrowse').href='https://connect.intentionalnoise.info/gig-requests.html?q='+encodeURIComponent(memberKeyword);
- const note=textElement('p','Your keyword will carry to the signed-in Connect member board: '+memberKeyword,'detail');
- $('member-requests').insertBefore(note,$('member-requests').querySelector('.booking-roles'));
-}
-load();focusShared();
+ const q=new URLSearchParams(location.search),h=location.hash;
+ const booking=q.get('booking');
+ if(booking&&/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(booking)){location.replace('musicians.html?booking='+encodeURIComponent(booking)+'#opportunities');return;}
+ if(h==='#opportunities'||h==='#member-requests'||h==='#social'){location.replace('musicians.html'+location.search+h);return;}
+ if(h==='#regional'){location.replace('regional-opportunities.html');return;}
+ if(h==='#external-performers'){location.replace('external-performers.html');return;}
+ if(h==='#whats-free'){location.replace('free-vs-paid.html');return;}
 })();
 </script>
 </body>
