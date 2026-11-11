@@ -17,6 +17,12 @@ main{padding:24px 0 58px}section{padding:24px 0;scroll-margin-top:20px}h1{font-s
 .btn.alt,button.alt{background:transparent;border-color:#92ae91;color:var(--cream)}.btn.mint,button.mint{background:var(--mint);border-color:var(--mint);color:#14281a}
 button:disabled{opacity:.55;cursor:wait}.searchbar input{flex:1 1 240px;min-height:46px;padding:11px 14px;background:#11271c;color:white;border:1px solid #83a38b;border-radius:9px;font:inherit}
 :focus-visible{outline:3px solid #b8ffb4;outline-offset:3px}
+.opportunity-shortcuts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0 0}
+.opportunity-shortcut{display:flex;flex-direction:column;gap:5px;min-width:0;padding:15px 17px;background:var(--card);border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--cream)}
+.opportunity-shortcut:hover,.opportunity-shortcut:focus-visible{border-color:var(--mint);background:#284c36}
+.opportunity-shortcut b{font-size:1.7rem;color:var(--mint);font-variant-numeric:tabular-nums}
+.opportunity-shortcut span{font-size:.85rem;color:var(--muted)}
+@media(max-width:520px){.opportunity-shortcuts{gap:8px}.opportunity-shortcut{padding:11px 9px}.opportunity-shortcut b{font-size:1.45rem}.opportunity-shortcut span{font-size:.76rem}}
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}
 .listing,.panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:19px}
 .listing{display:flex;flex-direction:column;gap:9px;min-width:0}.listing h3{overflow-wrap:anywhere}.listing p{margin:0}
@@ -43,6 +49,11 @@ button:disabled{opacity:.55;cursor:wait}.searchbar input{flex:1 1 240px;min-heig
 <section aria-labelledby="title"><div class="eyebrow">For artists and musicians</div><h1 id="title">Find a gig.</h1>
 
 <div class="actions"><a class="btn mint" href="https://connect.intentionalnoise.info/auth.html?role=musician#auth">Sign up / sign in free</a><a class="btn alt" href="regional-opportunities.html">Nationwide opportunities</a></div>
+<nav class="opportunity-shortcuts" aria-label="Jump to nationwide opportunity lists">
+<a class="opportunity-shortcut" href="regional-opportunities.html#all-opportunities"><b id="nationwideTotal">47</b><span>All nationwide opportunities</span></a>
+<a class="opportunity-shortcut" href="regional-opportunities.html#venues"><b id="nationwideVenues">30</b><span>Venue inquiries</span></a>
+<a class="opportunity-shortcut" href="regional-opportunities.html#festivals"><b id="nationwideFestivals">17</b><span>Festivals &amp; auditions</span></a>
+</nav>
 </section>
 <section id="opportunities" aria-labelledby="opportunities-title">
 <h2 id="opportunities-title">Open venue bookings</h2>
@@ -171,7 +182,33 @@ if(memberKeyword){
  const note=textElement('p','Your keyword will carry to the signed-in Connect member board: '+memberKeyword,'detail');
  $('member-requests').insertBefore(note,$('member-requests').querySelector('.booking-roles'));
 }
-load();focusShared();
+// Keep the three nationwide shortcut numbers in sync with approved source records.
+async function syncNationwideCounts(){
+ try{
+  const response=await fetch('./regional-opportunities.json',{cache:'no-store'});
+  if(!response.ok)throw Error('Directory unavailable');
+  const data=await response.json();
+  if(!Array.isArray(data.opportunities))throw Error('Unexpected directory format');
+  const now=new Intl.DateTimeFormat('sv-SE',{timeZone:'America/Indiana/Indianapolis',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  const validDate=v=>typeof v==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(v)&&!Number.isNaN(Date.parse(v+'T12:00:00Z'));
+  const visible=x=>{
+   if(!x||x.approval_status!=='approved'||x.approved_by_owner!==true||!['festival','venue'].includes(x.category))return false;
+   if(![x.organizer,x.location,x.summary,x.source_url,x.verified_on].every(v=>typeof v==='string'&&v.trim())||!validDate(x.verified_on))return false;
+   try{if(new URL(x.source_url).protocol!=='https:')return false}catch{return false}
+   const age=(Date.parse(now+'T12:00:00Z')-Date.parse(x.verified_on+'T12:00:00Z'))/86400000;
+   if(x.verified_on>now||age>45)return false;
+   if(x.application_deadline&&(!validDate(x.application_deadline)||x.application_deadline<now))return false;
+   if(x.event_date&&(!validDate(x.event_date)||x.event_date<now))return false;
+   if(x.expires_on&&(!validDate(x.expires_on)||x.expires_on<now))return false;
+   return true;
+  };
+  const current=data.opportunities.filter(visible);
+  $('nationwideTotal').textContent=String(current.length);
+  $('nationwideVenues').textContent=String(current.filter(x=>x.category==='venue').length);
+  $('nationwideFestivals').textContent=String(current.filter(x=>x.category==='festival').length);
+ }catch(e){document.querySelectorAll('.opportunity-shortcut b').forEach(el=>el.textContent='—')}
+}
+load();focusShared();syncNationwideCounts();
 })();
 </script>
 </body></html>
