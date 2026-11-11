@@ -43,7 +43,7 @@
       "location": "Fishers, IN",
       "genre": "Pop / rock / variety",
       "format": "band",
-      "source_url": "https://www.thebash.com/pop-band/off-the-hook-indy",
+      "source_url": "https://www.thebash.com/cover-band/off-the-hook-indy",
       "summary": "Party and event performances",
       "reviewed_on": "2026-11-11",
       "status": "external_booking_source"
@@ -86,7 +86,7 @@
       "name": "The McKinleys",
       "location": "Austin, TX",
       "genre": "Bluegrass / roots",
-      "format": "band",
+      "format": "duo",
       "source_url": "https://www.gigsalad.com/the_mckinleys_austin",
       "summary": "Bluegrass event music",
       "reviewed_on": "2026-11-11",
@@ -95,7 +95,7 @@
     {
       "id": "external-artist-20261111-009",
       "name": "Sam Johnson",
-      "location": "Scottsdale, AZ",
+      "location": "Boston, MA",
       "genre": "Cover / pop",
       "format": "flexible",
       "source_url": "https://www.gigsalad.com/samjohnson",
@@ -117,7 +117,7 @@
     {
       "id": "external-artist-20261111-011",
       "name": "Chicago Rock Exchange",
-      "location": "Winnetka, IL",
+      "location": "Chicago, IL",
       "genre": "Classic rock",
       "format": "band",
       "source_url": "https://www.gigsalad.com/chicago_rock_exchange_winnetka",
@@ -150,7 +150,7 @@
     {
       "id": "external-artist-20261111-014",
       "name": "Justin & The SwingBeats",
-      "location": "Phoenix, AZ",
+      "location": "Washington, DC",
       "genre": "Swing / party",
       "format": "band",
       "source_url": "https://www.gigsalad.com/justin_the_swingbeats_las_vegas",
@@ -161,7 +161,7 @@
     {
       "id": "external-artist-20261111-015",
       "name": "Tom Frye / Frye Family Band",
-      "location": "Bryant, IN",
+      "location": "Nashville, TN",
       "genre": "Christian / gospel",
       "format": "band",
       "source_url": "https://www.gigsalad.com/tom_fryefrye_family_band_bryant",
@@ -183,7 +183,7 @@
     {
       "id": "external-artist-20261111-017",
       "name": "The Apollo Trio",
-      "location": "Las Vegas, NV",
+      "location": "Phoenix, AZ",
       "genre": "Jazz / standards",
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/theapollotrio",
@@ -205,7 +205,7 @@
     {
       "id": "external-artist-20261111-019",
       "name": "The Keene Singers",
-      "location": "Beverly Hills, CA",
+      "location": "Denver, CO",
       "genre": "A cappella / choir",
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/the_keene_singers_beverly_hills",
@@ -260,7 +260,7 @@
     {
       "id": "external-artist-20261111-024",
       "name": "The Hits Squad",
-      "location": "Alpharetta, GA",
+      "location": "Atlanta, GA",
       "genre": "Classic rock",
       "format": "band",
       "source_url": "https://www.gigsalad.com/the_hits_squad_alpharetta",
@@ -438,7 +438,7 @@
       "name": "3 West",
       "location": "Lancaster, PA",
       "genre": "Acoustic",
-      "format": "band",
+      "format": "duo",
       "source_url": "https://www.gigsalad.com/3_west_lancaster",
       "summary": "Acoustic group",
       "reviewed_on": "2026-11-11",
@@ -469,7 +469,7 @@
     {
       "id": "external-artist-20261111-043",
       "name": "Cold Weather Company",
-      "location": "New Brunswick, NJ",
+      "location": "New York City, NY",
       "genre": "Acoustic / folk",
       "format": "band",
       "source_url": "https://www.gigsalad.com/cold_weather_company_new_brunswick",
@@ -491,7 +491,7 @@
     {
       "id": "external-artist-20261111-045",
       "name": "The Niche",
-      "location": "Fort Lee, NJ",
+      "location": "New York City, NY",
       "genre": "Wedding / pop",
       "format": "band",
       "source_url": "https://www.gigsalad.com/the_niche_fort_lee",
@@ -519,7 +519,7 @@
       "source_url": "https://www.dondria.com/",
       "summary": "Official artist booking inquiries",
       "reviewed_on": "2026-11-11",
-      "status": "external_booking_source"
+      "status": "review_required"
     },
     {
       "id": "external-artist-20261111-048",
