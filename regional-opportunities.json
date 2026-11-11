@@ -57,7 +57,7 @@
       "organizer": "The New Colossus Festival",
       "location": "New York, NY",
       "title": "Performer application",
-      "summary": "Emerging touring artists; 2027 festival; application fee; complete application on desktop.",
+      "summary": "Original emerging indie-rock acts; $100 nonrefundable fee; desktop application. No other NYC-area public shows Feb 1–Mar 31, 2027.",
       "source_url": "https://www.newcolossusfestival.com/apply",
       "application_deadline": "2026-12-01",
       "event_date": "2027-03-09",
@@ -347,7 +347,7 @@
       "organizer": "Horn's Bar",
       "location": "Mackinac Island, MI",
       "title": "Artist booking inquiry",
-      "summary": "Seasonal single, duo and band inquiries; spring/summer booking.",
+      "summary": "Seasonal solo, duo and band inquiry form remains available. Organizer announces winter closure and spring reopening.",
       "source_url": "https://www.hornsbar.com/inquiries-performers/",
       "verified_on": "2026-11-11",
       "approval_status": "approved",
@@ -403,10 +403,10 @@
       "organizer": "Rockin' Buffalo Saloon",
       "location": "West Seneca, NY",
       "title": "Artist booking inquiry",
-      "summary": "New and established bands; open request-to-play form.",
+      "summary": "Previous performer booking form returns 404. Venue homepage remains live; no replacement performer inquiry route verified.",
       "source_url": "https://rockinbuffalosaloon.com/bookings/",
       "verified_on": "2026-11-11",
-      "approval_status": "approved",
+      "approval_status": "retired",
       "approved_by_owner": true,
       "source_kind": "organizer submission page",
       "submission_type": "Rolling venue inquiry"
@@ -676,6 +676,22 @@
       "approved_by_owner": true,
       "source_kind": "organizer submission page",
       "submission_type": "Rolling venue inquiry"
+    },
+    {
+      "id": "ig-us-20261111-48",
+      "category": "festival",
+      "organizer": "Treefort Music Fest",
+      "location": "Boise, ID",
+      "title": "2027 music submissions",
+      "summary": "Music projects; $20 submission fee after Nov 1. March Boise-area 100-mile radius restriction; selected artists offered at least one 30–40-minute set.",
+      "source_url": "https://treefort.submittable.com/submit/364866/music-submissions-2027",
+      "application_deadline": "2026-11-21",
+      "event_date": "2027-03-31",
+      "verified_on": "2026-11-11",
+      "approval_status": "approved",
+      "approved_by_owner": true,
+      "source_kind": "organizer submission page",
+      "submission_type": "Application / audition"
     }
   ]
 }
