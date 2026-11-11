@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "updated_on": "2026-11-11",
-  "scope": "United States",
+  "scope": "United States and Canada",
   "disclaimer": "External public booking-source references only; no availability guaranteed and none of these performers is represented as an IneedaGig/Connect member.",
   "artists": [
     {
@@ -540,6 +540,204 @@
       "format": "ensemble",
       "source_url": "https://theplatters.com/",
       "summary": "Official band performance booking inquiries",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-001",
+      "name": "The AC Project",
+      "location": "Toronto, ON, Canada",
+      "genre": "R&B / pop / party",
+      "format": "band",
+      "source_url": "https://www.theacproject.ca/booking-inquiry",
+      "summary": "Toronto live band taking event, wedding and concert inquiries.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-002",
+      "name": "The Covernotes",
+      "location": "Oakville / Toronto, ON, Canada",
+      "genre": "Pop / rock / party covers",
+      "format": "band",
+      "source_url": "https://www.thecovernotes.ca/",
+      "summary": "Ontario cover band with a public event-booking contact.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-003",
+      "name": "Memory Lane",
+      "location": "Mississauga / Toronto, ON, Canada",
+      "genre": "Dance / pop / event music",
+      "format": "band",
+      "source_url": "https://memorylanetoronto.com/contact",
+      "summary": "Event and wedding band offering booking inquiries.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-004",
+      "name": "Soular",
+      "location": "Toronto, ON, Canada",
+      "genre": "Soul / dance / variety",
+      "format": "band",
+      "source_url": "https://soular.ca/contact/",
+      "summary": "Live group with an event quotation and contact form.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-005",
+      "name": "The Get Down (Chandra Raye)",
+      "location": "Toronto, ON, Canada",
+      "genre": "Funk / soul / R&B",
+      "format": "band",
+      "source_url": "https://chandraraye.ca/book-us",
+      "summary": "Toronto funk and soul group with a public booking request.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-006",
+      "name": "PK3 Jazz Trio",
+      "location": "Vancouver, BC, Canada",
+      "genre": "Jazz / standards",
+      "format": "ensemble",
+      "source_url": "https://vancouverjazz.ca/contact/",
+      "summary": "Trio accepting private and corporate event requests.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-007",
+      "name": "Stolen Moments Jazz",
+      "location": "Vancouver, BC, Canada",
+      "genre": "Jazz / standards",
+      "format": "ensemble",
+      "source_url": "https://www.stolenmomentsjazz.ca/",
+      "summary": "Vancouver jazz trio offering event-date inquiries and flexible lineups.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-008",
+      "name": "Vancouver Jazz Orchestra",
+      "location": "Vancouver, BC, Canada",
+      "genre": "Big band jazz",
+      "format": "ensemble",
+      "source_url": "https://vancouverjazzorchestra.ca/contact/",
+      "summary": "Large jazz ensemble with 7-, 10- and 17-piece booking formats.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-009",
+      "name": "Full House Jazz Big Band",
+      "location": "Greater Vancouver, BC, Canada",
+      "genre": "Big band / swing",
+      "format": "ensemble",
+      "source_url": "https://fullhousejazz.ca/",
+      "summary": "Big band inviting private-event and community performance bookings.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-010",
+      "name": "Ambush",
+      "location": "Eastern Ontario, Canada",
+      "genre": "Country / rock / variety",
+      "format": "band",
+      "source_url": "https://www.getambushed.com/",
+      "summary": "Touring live band accepting festivals, fairs and private event inquiries.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-011",
+      "name": "G. Ken Holman",
+      "location": "Ottawa, ON, Canada",
+      "genre": "Live performance / instrumental",
+      "format": "solo",
+      "source_url": "https://gkhmusic.ca/",
+      "summary": "Ottawa musician offering performance-booking inquiries.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-012",
+      "name": "Scott Kelly and the Dynamics",
+      "location": "Ottawa, ON, Canada",
+      "genre": "Rock / pop / ska / reggae",
+      "format": "band",
+      "source_url": "https://scottkellyandthedynamics.ca/contact",
+      "summary": "Ottawa band accepting original-music and cover-set bookings.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-013",
+      "name": "Andy MacDonald / Andy Mac's Hot 5-tet",
+      "location": "Montréal, QC, Canada",
+      "genre": "Traditional / gypsy jazz",
+      "format": "flexible",
+      "source_url": "https://andymacdonaldmusic.ca/reservation/",
+      "summary": "Montréal bandleader offering solo through small-group jazz engagements.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-014",
+      "name": "Jennifer Hanson Music",
+      "location": "Winnipeg, MB, Canada",
+      "genre": "Rock / covers / corporate",
+      "format": "flexible",
+      "source_url": "https://jenniferhanson.ca/make-a-booking",
+      "summary": "Winnipeg performer offering several band and trio formats for events.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-015",
+      "name": "Goldstream String Quartet",
+      "location": "Victoria, BC, Canada",
+      "genre": "String quartet / event music",
+      "format": "ensemble",
+      "source_url": "https://www.goldstreamquartet.com/booking-info/",
+      "summary": "Victoria-based string ensemble with an event-quote request.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-016",
+      "name": "Shenanigans",
+      "location": "Victoria, BC, Canada",
+      "genre": "Live band / variety",
+      "format": "band",
+      "source_url": "https://www.shenanigansband.ca/",
+      "summary": "Victoria live band with a public event-booking inquiry.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-017",
+      "name": "The Fine Tuners",
+      "location": "Halifax, NS, Canada",
+      "genre": "Violin / DJ / event music",
+      "format": "duo",
+      "source_url": "https://thefinetuners.ca/booking-weddings-for-2027-2027-voted-best-in-wedding-entertainment-2025/",
+      "summary": "Halifax violin and DJ duo inviting 2026–27 event inquiries.",
+      "reviewed_on": "2026-11-11",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ca-20261111-018",
+      "name": "T.K. The Artist",
+      "location": "Victoria, BC, Canada",
+      "genre": "Live performance / singer-songwriter",
+      "format": "solo",
+      "source_url": "https://tktheartistmusic.com/contact/",
+      "summary": "Victoria performer accepting festivals, event and collaboration bookings.",
       "reviewed_on": "2026-11-11",
       "status": "external_booking_source"
     }
