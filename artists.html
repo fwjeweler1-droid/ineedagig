@@ -34,10 +34,20 @@ input{border:1px solid #7f9aa5;background:#0c202b;color:white;border-radius:9px;
 body{background:radial-gradient(ellipse at 90% 0%,#2b5538 0%,transparent 40%),var(--bg);color:#fff8e9}
 header{background:#10261b}.card,.profile{background:#1b3429;border-color:#688969}
 .photo{background:#2c4d38}.button,button{color:#1b281d}.button.alt{color:#e5f5da}
+
+/* IneedaGig character theme: approved mascot art; booking logic unaffected. */
+.swamp-guide{display:flex;align-items:center;gap:17px;max-width:740px;margin:14px 0 24px;padding:12px 20px 12px 13px;border:1px solid #8cac7a;border-left:5px solid #efc56f;border-radius:17px;background:linear-gradient(120deg,#284c34 0%,#1a3628 68%,#12291f 100%);box-shadow:0 12px 28px #06140c60}
+.swamp-guide.ineeda{border-color:#b99c6b;border-left-color:#efc56f;background:linear-gradient(120deg,#51442c 0%,#30412d 65%,#1b3025 100%)}
+.swamp-guide img{display:block;width:118px;height:118px;max-width:30%;flex:none;object-fit:contain;filter:drop-shadow(0 6px 8px #091a1266)}
+.swamp-guide .voice{display:block;font-size:.77rem;line-height:1.4;letter-spacing:.12em;text-transform:uppercase;color:#f1c783;font-weight:850;margin:0 0 6px}
+.swamp-guide strong{display:block;font-size:clamp(1.2rem,2.7vw,1.67rem);line-height:1.19;color:#fff8e9}
+.swamp-guide p{margin:7px 0 0;color:#d8e7d3;line-height:1.45;font-size:.94rem}
+@media(max-width:480px){.swamp-guide{padding:10px 12px;gap:12px;margin:12px 0 18px}.swamp-guide img{width:88px;height:88px;max-width:29%}.swamp-guide p{font-size:.86rem}}
 </style></head>
 <body><header><nav class="wrap"><a class="name" href="https://ineedagig.net/">IneedaGig</a><div class="actions"><a href="https://ineedagig.net/venues.html">I’m hiring</a><a href="https://ineedagig.net/musicians.html">Find gigs</a><a href="https://connect.intentionalnoise.info/auth.html?role=musician">Join as a musician</a></div></nav></header>
 <main class="wrap">
 <div class="eyebrow">Musicians for real stages</div><h1>Published artists</h1>
+<aside class="swamp-guide ineeda" aria-label="Ineeda Gig presents published artists"><img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="Ineeda Gig, the approved booking mascot" loading="lazy" width="1254" height="1254"><div><span class="voice">Ineeda Gig presents</span><strong>Meet the musicians!</strong><p>These artists chose to publish their profiles.</p></div></aside>
 <p class="lead">Discover performing artists and bands with published profiles, then explore current booking opportunities. One Connect account powers the same published profile on this site, IneedaGig, IntentionalNoise.info, and IntentionalNoise.band.</p>
 <div class="actions"><input type="search" id="filter" aria-label="Filter artists" placeholder="Search artist, instrument or genre" maxlength="100"><a class="button alt" href="https://connect.intentionalnoise.info/auth.html?role=musician">Create a free artist account</a></div>
 <p class="status" id="status" role="status" aria-live="polite">Loading published profiles…</p>
