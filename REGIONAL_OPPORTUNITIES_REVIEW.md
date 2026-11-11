@@ -80,3 +80,27 @@ The message does not promise that messaging, payment collection, automatic posti
 ## Review and acceptance
 
 Before merging to \`main\`, inspect the homepage navigation and regional directory in phone and desktop widths; verify the empty state; test the type and text filters, failure handling, malformed/unapproved/expired records, stale verification, HTTPS-only links, and no exposed private fields. Use test fixtures only on a nonpublic branch; do not publish fictitious opportunities. Check GitHub Pages deployment and live HTTPS after any authorized release. This change deliberately leaves all current Supabase tables, RLS, member auth, MFA, artwork, privacy rights, and synchronized project records untouched.
+
+
+## Nationwide directory approval and daily refresh — superseding note (November 11, 2026)
+
+Charlie explicitly approved publishing **all 47 organizer-source entries** returned in the nationwide November 11 research and maintaining them **every morning**. This authorization supersedes the earlier requirement for another individual approval for these exact 47 external source summaries. It does **not** authorize contacting organizations, applying for performances, posting to their accounts, or making bookings. Those remain separate permission gates.
+
+The approved live candidate feed is \`regional-opportunities.json\` (schema version 2). It contains **16 festival/audition application routes** and **31 rolling venue-booking inquiry routes**. These are independent organizer submission channels, not booked gigs or promises of available dates. The page \`regional-opportunities.html\` displays them in **two separate tables**. All source links are HTTPS to the organizer's own site or designated application portal. Text is an original factual summary, not copied marketing content.
+
+The directory is now nationwide; the separate Fort Wayne 500-mile discovery watch in the Monday Brief may continue to prioritize regional matches. Do not conflate it with the national directory's scope.
+
+### Every-morning editorial update
+
+The existing **Morning Start, 8:00 a.m. America/Indiana/Indianapolis** is the daily check, not a new paid subscription, daemon or independent account. Each run:
+
+1. Read the current \`regional-opportunities.json\`, plus the prior update state; don't overwrite newer branch/source changes blindly.
+2. Prioritize imminent deadlines, then check organizer sources for all existing records using official pages or designated application pages. Discover strong **new nationwide** sources via official search. A general artist inquiry is not an announced vacant date. Never invent event dates, pay, contact rights or fees.
+3. For still-open verified records, update \`verified_on\` only when the page was actually checked. Update factual summary/deadline if the source changed. Remove or unpublish applications closed, withdrawn, expired, redirected to unrelated content, or without reliable direct source evidence; distinguish broken reachability from an organizer-confirmed closure. For transient errors, do not mark as permanently closed; stop showing stale data until reverified. Preserve stable record IDs.
+4. Publish newly discovered **high-confidence public source listings** using the same two categories; the user's ongoing update instruction authorizes editorial directory entries after official verification. No venue-owned booking is created. Avoid duplicates and off-topic listings, and make only minimal-diff feed/site edits.
+5. Validate 1) JSON schema and counts, 2) all unique HTTPS URLs, 3) source recency, 4) deadline/event expiry filtering, 5) zero public personal contact info, and 6) compatibility with the existing index page. Read back the current GitHub commit after any change, verify GitHub Pages workflow result where available, and report any failure honestly.
+6. In the Morning Start response, give a **short status line** with added, changed, closed and remaining counts when a material difference occurred; don't clutter the release package with a full 47-item repeat. If no material change, one unobtrusive status line is enough. If web or GitHub write access is unavailable, list the precise unverified or pending changes without claiming an update.
+
+The page's browser validation hides expired festival application deadlines and entries with source checks older than 45 days. Ongoing venue inquiries have no invented event date or expiry. If all entries are stale after repeated failed checks, display an empty state rather than misleading performers.
+
+**Privacy/outreach:** The public JSON file stores no email addresses, phone numbers, private notes, applicant data or credentials. Never send invitations or contact venues automatically. Organizer invitations still require approval of each specific recipient/channel and final draft. Respect performer-application-only contact restrictions, opt-outs, and all posted submission rules. No changes to Connect auth/RLS, gig request tables, venue offers, FROG board, or owner-controlled artist showcase publications.
