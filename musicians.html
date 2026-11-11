@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#102c21">
+<meta name="description" content="Find currently open music gigs, nationwide opportunities, and free musician registration on IneedaGig.">
+<title>Find Gigs | IneedaGig</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;--bg:#101e1a;--card:#1b3429;--border:#527561;--mint:#a9e58a;--gold:#efc56f;--cream:#fff8e9;--muted:#d2dfd1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 90% 0%,#305b3b,transparent 48%),var(--bg);color:var(--cream)}a{color:var(--mint)}
+.wrap{width:min(1060px,calc(100% - 34px));margin:auto}
+header{background:#10261b;border-bottom:1px solid var(--border)}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;flex-wrap:wrap}
+.logo{color:var(--cream);text-decoration:none;font-weight:900;font-size:1.35rem}.logo b{color:var(--gold)}.back{font-size:.94rem}
+main{padding:24px 0 58px}section{padding:24px 0;scroll-margin-top:20px}h1{font-size:clamp(2.25rem,5.5vw,4rem);line-height:1.09;letter-spacing:-.045em;margin:10px 0 15px}h2{font-size:clamp(1.45rem,3vw,2.15rem);margin:0 0 12px}h3{font-size:1.15rem;margin:0 0 8px}
+.eyebrow{font-weight:850;color:var(--gold);font-size:.76rem;text-transform:uppercase;letter-spacing:.13em}
+.lead{color:var(--muted);line-height:1.6;font-size:1.08rem;margin:10px 0 16px}
+.actions,.searchbar,.share-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:17px 0}
+.btn,button{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:46px;padding:11px 17px;border:1px solid var(--gold);border-radius:10px;background:var(--gold);color:#1b281d;text-decoration:none;font:inherit;font-weight:800;cursor:pointer}
+.btn.alt,button.alt{background:transparent;border-color:#92ae91;color:var(--cream)}.btn.mint,button.mint{background:var(--mint);border-color:var(--mint);color:#14281a}
+button:disabled{opacity:.55;cursor:wait}.searchbar input{flex:1 1 240px;min-height:46px;padding:11px 14px;background:#11271c;color:white;border:1px solid #83a38b;border-radius:9px;font:inherit}
+:focus-visible{outline:3px solid #b8ffb4;outline-offset:3px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}
+.listing,.panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:19px}
+.listing{display:flex;flex-direction:column;gap:9px;min-width:0}.listing h3{overflow-wrap:anywhere}.listing p{margin:0}
+.subtitle,.detail,.micro{color:var(--muted);font-size:.89rem;line-height:1.5}.spec{color:var(--cream)}
+.tag{align-self:flex-start;background:var(--mint);border-radius:99px;padding:5px 10px;color:#112920;font-size:.74rem;font-weight:850}
+.listing .actions{margin-top:auto;padding-top:9px}.listing .actions .btn,.listing .actions button{font-size:.9rem;min-height:42px}
+#featured{border:1px solid var(--gold);background:#273b2c;border-radius:14px;padding:20px;margin:18px 0}#featuredCard{margin-top:13px}
+.status{color:#d8f8d3;font-size:.91rem;min-height:1.4em}.share-preview{background:#0e251a;border:1px solid #5e8361;border-radius:8px;padding:15px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.89rem;line-height:1.5}
+#social{border-top:1px solid var(--border)}footer{padding:25px 0;border-top:1px solid var(--border);color:var(--muted);font-size:.89rem}footer a{color:var(--mint)}[hidden]{display:none!important}
+@media(max-width:680px){.cards{grid-template-columns:1fr}main{padding-top:18px}.searchbar input{flex-basis:100%}.actions .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<header><div class="wrap"><a class="logo" href="./">Ineeda<b>Gig</b></a><a class="back" href="venues.html">I'm hiring</a></div></header>
+<main class="wrap">
+<section aria-labelledby="title"><div class="eyebrow">For artists and musicians</div><h1 id="title">Find a gig.</h1>
+<div class="actions"><a class="btn mint" href="https://connect.intentionalnoise.info/auth.html?role=musician#auth">Sign up / sign in free</a><a class="btn alt" href="regional-opportunities.html">Nationwide opportunities</a></div>
+</section>
+<section id="opportunities" aria-labelledby="opportunities-title">
+<h2 id="opportunities-title">Open venue bookings</h2>
+<p class="detail">Public future offers only. A listing is an opportunity, not a confirmed booking. Private venue records stay private.</p>
+<div id="featured" hidden aria-live="polite"><strong>Shared opportunity</strong><div id="featuredCard"></div></div>
+<div class="searchbar"><input type="search" id="filter" maxlength="100" placeholder="Search venue, city or genre" aria-label="Search current public gig offers"><button id="refresh" class="alt" type="button">Refresh gigs</button></div>
+<p id="feedStatus" class="status" role="status" aria-live="polite">Checking current openings…</p>
+<div id="bookingCards" class="cards"></div>
+</section>
+<section aria-label="Other music opportunities"><div class="panel"><h2>More places to look</h2>
+<div class="actions"><a class="btn alt" href="regional-opportunities.html">Festivals &amp; venue submissions nationwide</a><a class="btn alt" id="memberBrowse" href="https://connect.intentionalnoise.info/gig-requests.html">Member-only band &amp; gig requests</a></div>
+</div></section>
+<section id="member-requests" aria-labelledby="member-requests-title"><h2 id="member-requests-title">Connect member requests</h2>
+<p class="detail">Band openings and other member requests require a free Connect login.</p><div class="panel"><a class="btn mint" href="https://connect.intentionalnoise.info/gig-requests.html">Sign in to member requests</a><div class="booking-roles"></div></div>
+</section>
+<section id="social" aria-labelledby="social-title">
+<h2 id="social-title">Share an open gig</h2>
+<div class="panel">
+<h3 id="shareHeading">Choose a public booking above</h3><p id="shareHelp" class="detail">Use “Share this gig” on an open opportunity to prepare a link.</p>
+<div id="shareTool" hidden>
+<div id="shareText" class="share-preview" aria-label="Prepared social post"></div>
+<div class="share-actions"><button type="button" id="copyLink" class="mint">Copy booking link</button><button type="button" id="copyPost" class="alt">Copy caption + link</button><button type="button" id="nativeShare" class="alt" hidden>Share on phone</button></div>
+<div class="share-actions"><button type="button" data-platform="facebook" class="alt">Facebook</button><button type="button" data-platform="x" class="alt">X</button><button type="button" data-platform="threads" class="alt">Threads</button><button type="button" data-platform="linkedin" class="alt">LinkedIn</button></div>
+<p id="shareStatus" class="status" role="status" aria-live="polite"></p>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">IneedaGig · <a href="./">Choose a path</a> · <a href="free-vs-paid.html">What's free?</a> · <a href="https://intentionalnoise.info/privacy.html">Privacy</a></div></footer>
+<script>
+(function(){
+'use strict';
+const API='https://xyudcdgjyormlokwhfoi.supabase.co/rest/v1/venue_booking_requests';
+const KEY='sb_publishable_-gMviWXPBzov-2D-htf9iA_y6ZVV-q0';
+const CONNECT='https://connect.intentionalnoise.info/fill-my-stage.html';
+const PUBLIC_HOME='https://ineedagig.net/musicians.html';
+const $=id=>document.getElementById(id);
+let rows=[],selected=null;
+function dateKey(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function dateText(s){const d=new Date(s+'T12:00:00');return isNaN(d.getTime())?s:d.toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'})}
+function money(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(Number(n))}
+function budget(b){return b.budget_kind==='quotes'?'Quotes welcome':b.budget_kind==='fixed'?(money(b.budget_min)+' offer'):(money(b.budget_min)+'–'+money(b.budget_max)+' budget')}
+const actNames={band:'Band',solo:'Solo musician',duo:'Duo',trio:'Trio',any:'Open to suggestions'};
+function offerUrl(id){return PUBLIC_HOME+'?booking='+encodeURIComponent(id)+'#opportunities'}
+function respondUrl(id){return CONNECT+'?booking='+encodeURIComponent(id)+'#openRequests'}
+function textElement(tag,value,cls){const el=document.createElement(tag);el.textContent=value;if(cls)el.className=cls;return el}
+function createCard(b){
+ const card=document.createElement('article');card.className='listing';
+ card.append(textElement('span','OPEN · '+dateText(b.event_date),'tag'));
+ card.append(textElement('h3',b.venue_name+' · '+(actNames[b.act_type]||'Live music')));
+ card.append(textElement('p',[b.city,b.region,b.country].filter(Boolean).join(', '),'subtitle'));
+ card.append(textElement('p',(b.genre||'Music style open')+' · '+budget(b),'spec'));
+ const actions=textElement('div','','actions');
+ const a=textElement('a','View & respond','btn');a.href=respondUrl(b.id);actions.append(a);
+ const share=textElement('button','Share this gig','alt');share.type='button';share.addEventListener('click',()=>selectOffer(b));actions.append(share);
+ card.append(actions);return card;
+}
+function render(){
+ const root=$('bookingCards');root.replaceChildren();
+ const q=$('filter').value.toLowerCase().trim();
+ const list=rows.filter(b=>[b.venue_name,b.city,b.region,b.country,b.genre,b.act_type].filter(Boolean).join(' ').toLowerCase().includes(q));
+ for(const row of list)root.append(createCard(row));
+ $('feedStatus').textContent=list.length?list.length+' current public opening'+(list.length===1?'':'s')+' shown.':'No matching public openings. Try another city or check back later.';
+}
+async function getOpen(id){
+ const query=new URLSearchParams({select:'id,venue_name,act_type,genre,event_date,city,region,country,budget_kind,budget_min,budget_max',status:'eq.open',event_date:'gte.'+dateKey(),order:'event_date.asc',limit:'24'});
+ if(id){query.delete('order');query.delete('limit');query.set('id','eq.'+id);query.set('limit','1')}
+ const response=await fetch(API+'?'+query.toString(),{headers:{apikey:KEY,Accept:'application/json'},cache:'no-store'});
+ if(!response.ok)throw Error('Could not retrieve public booking listings ('+response.status+').');
+ const data=await response.json();
+ if(!Array.isArray(data))throw Error('Unexpected booking response.');
+ return data;
+}
+function selectOffer(b){
+ selected=b;
+ $('shareHeading').textContent='Share: '+b.venue_name;
+ const caption='Booking opportunity: '+b.venue_name+' needs '+(actNames[b.act_type]||'live music')+' in '+[b.city,b.region].filter(Boolean).join(', ')+' on '+dateText(b.event_date)+'. '+budget(b)+'.';
+ $('shareText').textContent=caption+'\n'+offerUrl(b.id);
+ $('shareTool').hidden=false;
+ $('shareHelp').textContent='This booking is publicly open. Choose a platform to review the prepared post.';
+ $('shareStatus').textContent='';
+ $('social').scrollIntoView({behavior:'smooth',block:'start'});
+}
+async function focusShared(){
+ const id=new URLSearchParams(location.search).get('booking')||'';
+ if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id))return;
+ try{
+  const found=await getOpen(id);
+  if(!found.length){$('featured').hidden=false;$('featuredCard').replaceChildren(textElement('p','This booking is not publicly open. It may have been filled, hidden, cancelled or removed.','detail'));return}
+  const b=found[0];
+  $('featuredCard').replaceChildren(createCard(b));
+  $('featured').hidden=false;selectOffer(b);
+  $('featured').scrollIntoView({behavior:'smooth',block:'start'});
+ }catch(e){$('featured').hidden=false;$('featuredCard').replaceChildren(textElement('p','Could not verify the shared booking. '+e.message,'detail'))}
+}
+async function load(){
+ $('refresh').disabled=true;$('feedStatus').textContent='Loading public booking offers…';
+ try{rows=await getOpen();render()}catch(e){$('feedStatus').textContent='Booking feed is unavailable right now. Use the Connect listing link above. '+e.message}
+ finally{$('refresh').disabled=false}
+}
+async function copy(text){
+ if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);return}
+ const el=document.createElement('textarea');el.value=text;el.style.position='fixed';el.style.opacity='0';document.body.append(el);el.select();
+ const ok=document.execCommand('copy');el.remove();if(!ok)throw Error('Clipboard access unavailable.');
+}
+$('copyLink').addEventListener('click',async()=>{if(!selected)return;try{await copy(offerUrl(selected.id));$('shareStatus').textContent='Public booking link copied.'}catch(e){$('shareStatus').textContent=e.message}});
+$('copyPost').addEventListener('click',async()=>{if(!selected)return;try{await copy($('shareText').textContent);$('shareStatus').textContent='Caption and booking link copied.'}catch(e){$('shareStatus').textContent=e.message}});
+if(typeof navigator.share==='function'){$('nativeShare').hidden=false;$('nativeShare').addEventListener('click',()=>{if(!selected)return;navigator.share({title:'Booking opportunity: '+selected.venue_name,text:'Live music opening in '+selected.city,url:offerUrl(selected.id)}).catch(()=>{})})}
+document.querySelectorAll('[data-platform]').forEach(btn=>btn.addEventListener('click',()=>{
+ if(!selected)return;
+ const url=offerUrl(selected.id),body=$('shareText').textContent.split('\n')[0],platform=btn.dataset.platform;
+ const e=encodeURIComponent;
+ const urls={
+  facebook:'https://www.facebook.com/sharer/sharer.php?u='+e(url),
+  x:'https://twitter.com/intent/tweet?text='+e(body)+'&url='+e(url),
+  threads:'https://www.threads.com/intent/post?text='+e(body+' '+url),
+  linkedin:'https://www.linkedin.com/sharing/share-offsite/?url='+e(url)
+ };
+ if(urls[platform])window.open(urls[platform],'_blank','noopener,noreferrer');
+ $('shareStatus').textContent='Opened '+platform+' composer. You choose whether to publish.';
+}));
+$('filter').addEventListener('input',render);
+$('refresh').addEventListener('click',load);
+const memberKeyword=(new URLSearchParams(location.search).get('q')||'').slice(0,100);
+if(memberKeyword){
+ $('memberBrowse').href='https://connect.intentionalnoise.info/gig-requests.html?q='+encodeURIComponent(memberKeyword);
+ const note=textElement('p','Your keyword will carry to the signed-in Connect member board: '+memberKeyword,'detail');
+ $('member-requests').insertBefore(note,$('member-requests').querySelector('.booking-roles'));
+}
+load();focusShared();
+})();
+</script>
+</body></html>
