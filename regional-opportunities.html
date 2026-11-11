@@ -45,6 +45,15 @@ td .source{font-weight:800;white-space:normal;text-underline-offset:3px}
 footer{border-top:1px solid var(--border);padding:25px 0;color:var(--muted)}
 @media(max-width:850px){.table-shell{overflow-x:auto}table{min-width:790px}}
 @media(max-width:650px){nav{align-items:flex-start}.callout{grid-template-columns:1fr}main{padding:28px 0 42px}.filters input,.filters select{flex:1 1 100%}.stats{gap:9px}.stat{min-width:90px;flex:1}.stat b{font-size:1.45rem}}
+
+/* IneedaGig character theme: approved mascot art; booking logic unaffected. */
+.swamp-guide{display:flex;align-items:center;gap:17px;max-width:740px;margin:14px 0 24px;padding:12px 20px 12px 13px;border:1px solid #8cac7a;border-left:5px solid #efc56f;border-radius:17px;background:linear-gradient(120deg,#284c34 0%,#1a3628 68%,#12291f 100%);box-shadow:0 12px 28px #06140c60}
+.swamp-guide.ineeda{border-color:#b99c6b;border-left-color:#efc56f;background:linear-gradient(120deg,#51442c 0%,#30412d 65%,#1b3025 100%)}
+.swamp-guide img{display:block;width:118px;height:118px;max-width:30%;flex:none;object-fit:contain;filter:drop-shadow(0 6px 8px #091a1266)}
+.swamp-guide .voice{display:block;font-size:.77rem;line-height:1.4;letter-spacing:.12em;text-transform:uppercase;color:#f1c783;font-weight:850;margin:0 0 6px}
+.swamp-guide strong{display:block;font-size:clamp(1.2rem,2.7vw,1.67rem);line-height:1.19;color:#fff8e9}
+.swamp-guide p{margin:7px 0 0;color:#d8e7d3;line-height:1.45;font-size:.94rem}
+@media(max-width:480px){.swamp-guide{padding:10px 12px;gap:12px;margin:12px 0 18px}.swamp-guide img{width:88px;height:88px;max-width:29%}.swamp-guide p{font-size:.86rem}}
 </style></head>
 <body>
 <header><nav class="wrap" aria-label="Main navigation">
@@ -54,6 +63,7 @@ footer{border-top:1px solid var(--border);padding:25px 0;color:var(--muted)}
 <main class="wrap">
 <div class="eyebrow">IneedaGig · Performer opportunity directory</div>
 <h1>Opportunities <span>Beyond the Swamp</span> 🐸</h1>
+<aside class="swamp-guide" aria-label="Froggy introduces nationwide music opportunities"><img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="Froggy, the official mascot" loading="lazy" width="900" height="900"><div><span class="voice">Froggy says</span><strong>Here's what's croakin'!</strong><p>Festival applications and venue opportunities across the country.</p></div></aside>
 <p class="lead">A nationwide collection of festival applications, auditions, and venues that invite musicians to submit for future shows. Find the opening that fits your act, then go directly to the organizer's original listing.</p>
 <div class="actions"><a class="btn" href="https://connect.intentionalnoise.info/auth.html?role=musician">Create my free artist profile</a><a class="btn alt" href="musicians.html#opportunities">See venue-posted gigs</a></div>
 <div class="notice"><strong>Two types of leads — not confirmed bookings</strong>
