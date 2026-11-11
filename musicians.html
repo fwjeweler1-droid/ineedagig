@@ -28,10 +28,20 @@ button:disabled{opacity:.55;cursor:wait}.searchbar input{flex:1 1 240px;min-heig
 #social{border-top:1px solid var(--border)}footer{padding:25px 0;border-top:1px solid var(--border);color:var(--muted);font-size:.89rem}footer a{color:var(--mint)}[hidden]{display:none!important}
 @media(max-width:680px){.cards{grid-template-columns:1fr}main{padding-top:18px}.searchbar input{flex-basis:100%}.actions .btn{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* IneedaGig character theme: approved mascot art; booking logic unaffected. */
+.swamp-guide{display:flex;align-items:center;gap:17px;max-width:740px;margin:14px 0 24px;padding:12px 20px 12px 13px;border:1px solid #8cac7a;border-left:5px solid #efc56f;border-radius:17px;background:linear-gradient(120deg,#284c34 0%,#1a3628 68%,#12291f 100%);box-shadow:0 12px 28px #06140c60}
+.swamp-guide.ineeda{border-color:#b99c6b;border-left-color:#efc56f;background:linear-gradient(120deg,#51442c 0%,#30412d 65%,#1b3025 100%)}
+.swamp-guide img{display:block;width:118px;height:118px;max-width:30%;flex:none;object-fit:contain;filter:drop-shadow(0 6px 8px #091a1266)}
+.swamp-guide .voice{display:block;font-size:.77rem;line-height:1.4;letter-spacing:.12em;text-transform:uppercase;color:#f1c783;font-weight:850;margin:0 0 6px}
+.swamp-guide strong{display:block;font-size:clamp(1.2rem,2.7vw,1.67rem);line-height:1.19;color:#fff8e9}
+.swamp-guide p{margin:7px 0 0;color:#d8e7d3;line-height:1.45;font-size:.94rem}
+@media(max-width:480px){.swamp-guide{padding:10px 12px;gap:12px;margin:12px 0 18px}.swamp-guide img{width:88px;height:88px;max-width:29%}.swamp-guide p{font-size:.86rem}}
 </style></head><body>
 <header><div class="wrap"><a class="logo" href="./">Ineeda<b>Gig</b></a><a class="back" href="venues.html">I'm hiring</a></div></header>
 <main class="wrap">
 <section aria-labelledby="title"><div class="eyebrow">For artists and musicians</div><h1 id="title">Find a gig.</h1>
+<aside class="swamp-guide" aria-label="Froggy welcomes musicians"><img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="Froggy, the official mascot" loading="eager" width="900" height="900"><div><span class="voice">Froggy says</span><strong>Here's what's croakin'!</strong><p>Find gigs, auditions, and new opportunities.</p></div></aside>
 <div class="actions"><a class="btn mint" href="https://connect.intentionalnoise.info/auth.html?role=musician#auth">Sign up / sign in free</a><a class="btn alt" href="regional-opportunities.html">Nationwide opportunities</a></div>
 </section>
 <section id="opportunities" aria-labelledby="opportunities-title">
