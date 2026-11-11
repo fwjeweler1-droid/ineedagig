@@ -28,7 +28,11 @@ p{line-height:1.6}.lead{color:var(--muted);max-width:850px;font-size:1.1rem}
 .stat{display:flex;flex-direction:column;min-width:120px;padding:12px 18px;background:#1b3429;border:1px solid var(--border);border-radius:12px}
 .stat b{font-size:1.7rem;font-variant-numeric:tabular-nums;color:var(--mint)}.stat small{color:var(--muted)}
 .directory-total{color:var(--muted);font-size:.92rem;margin:18px 0 10px}.directory-total strong{color:var(--mint);font-variant-numeric:tabular-nums}
-.section-metrics{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.section-metrics .stat{min-width:155px;padding:9px 14px}.section-metrics .stat b{font-size:1.4rem}
+.stat-link{flex:1 1 150px;text-decoration:none;color:var(--cream);cursor:pointer;transition:border-color .15s,background .15s}
+.stat-link:hover,.stat-link:focus-visible{background:#294b38;border-color:var(--mint)}
+.stat-link:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.jump-target{scroll-margin-top:18px}
+@media(max-width:480px){.stat-link{flex:1 1 94px;min-width:94px;padding:11px}.stat-link b{font-size:1.45rem}.stat-link small{font-size:.76rem}}
 .filters label{font-weight:700;font-size:.9rem}.filters input,.filters select{background:#10251c;color:var(--cream);font:inherit;border:1px solid #83a38b;border-radius:10px;min-height:46px;padding:11px 13px}
 .filters input{flex:1 1 280px}.filters select{flex:0 1 255px}
 .section{margin-top:38px;scroll-margin-top:18px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:13px}
@@ -71,7 +75,11 @@ footer{border-top:1px solid var(--border);padding:25px 0;color:var(--muted)}
 <div class="notice"><strong>Two types of leads — not confirmed bookings</strong>
 <p><b>Festival applications</b> are for identified events or audition calls, sometimes with firm deadlines or fees. <b>Venue inquiry routes</b> accept artist proposals on a rolling basis; they do <em>not</em> guarantee an empty calendar slot. Contact organizers only through the submission instructions linked below. This directory does not accept applications or bookings on their behalf.</p>
 </div>
-<p class="directory-total"><strong id="totalCount">—</strong> available leads across the two lists</p>
+<nav class="stats" aria-label="Jump to opportunity lists">
+<a class="stat stat-link" href="#all-opportunities" data-filter=""><b id="totalCount">—</b><small>All opportunities</small></a>
+<a class="stat stat-link" href="#venues" data-filter="venue"><b id="venueCount">—</b><small>Venue inquiries</small></a>
+<a class="stat stat-link" href="#festivals" data-filter="festival"><b id="festivalCount">—</b><small>Events &amp; auditions</small></a>
+</nav>
 <div class="filters">
 <label for="search">Find opportunities</label>
 <input id="search" type="search" maxlength="120" placeholder="Search venue, state, genre, equipment, or deadline" aria-label="Search opportunities">
@@ -82,13 +90,14 @@ footer{border-top:1px solid var(--border);padding:25px 0;color:var(--muted)}
 </div>
 <p class="update-note">These entries are independent, factual summaries of organizer announcements. They are checked as part of the morning workflow. Last source check for each entry appears in the table; expired deadlines and stale confirmations are hidden. <span id="checked"></span></p>
 <p id="status" role="status" aria-live="polite">Loading verified performer opportunities…</p>
+<div id="all-opportunities" class="jump-target" tabindex="-1"></div>
 <section id="festivals" class="section" aria-labelledby="festivalsTitle">
-<div class="section-head"><div><div class="eyebrow">Applications · 2027 events</div><h2 id="festivalsTitle">Festival &amp; audition opportunities</h2><p>Deadline-driven applications first. Where an organizer has not published a deadline, its timing is marked accordingly.</p></div><div class="section-metrics"><div class="stat"><b id="festivalCount">—</b><small>Events &amp; auditions</small></div><span id="festivalsPill" class="pill">— results</span></div></div>
+<div class="section-head"><div><div class="eyebrow">Applications · 2027 events</div><h2 id="festivalsTitle">Festival &amp; audition opportunities</h2><p>Deadline-driven applications first. Where an organizer has not published a deadline, its timing is marked accordingly.</p></div><span id="festivalsPill" class="pill">— results</span></div>
 <div class="table-shell"><table><thead><tr><th scope="col">Organizer</th><th scope="col">Location</th><th scope="col">Opportunity / requirements</th><th scope="col">Dates / deadline</th><th scope="col">Original listing</th></tr></thead><tbody id="festivalRows"></tbody></table></div>
 <p id="festivalEmpty" class="empty" hidden>No matching current festival or audition applications.</p>
 </section>
 <section id="venues" class="section" aria-labelledby="venuesTitle">
-<div class="section-head"><div><div class="eyebrow">Ongoing submission routes · Nationwide</div><h2 id="venuesTitle">Venues accepting artist inquiries</h2><p>These organizers welcome pitches or roster submissions. Most don't advertise a specific unfilled performance date.</p></div><div class="section-metrics"><div class="stat"><b id="venueCount">—</b><small>Venue inquiries</small></div><span id="venuesPill" class="pill">— results</span></div></div>
+<div class="section-head"><div><div class="eyebrow">Ongoing submission routes · Nationwide</div><h2 id="venuesTitle">Venues accepting artist inquiries</h2><p>These organizers welcome pitches or roster submissions. Most don't advertise a specific unfilled performance date.</p></div><span id="venuesPill" class="pill">— results</span></div>
 <div class="table-shell"><table><thead><tr><th scope="col">Venue / organizer</th><th scope="col">Location</th><th scope="col">What they're looking for</th><th scope="col">Timing</th><th scope="col">Booking link</th></tr></thead><tbody id="venueRows"></tbody></table></div>
 <p id="venueEmpty" class="empty" hidden>No matching current venue inquiry routes.</p>
 </section>
@@ -153,7 +162,14 @@ async function load(){
   if(!data||!Array.isArray(data.opportunities))throw Error('Unexpected listing format');
   items=data.opportunities.filter(visible);
   $('checked').textContent='Directory file last edited: '+(isoDate(data.updated_on)?dateText(data.updated_on):'not available')+'.';
+  const query=(new URLSearchParams(location.search).get('q')||'').slice(0,120);
+  if(query)$('search').value=query;
+  const hash=location.hash;
+  if(hash==='#venues')$('category').value='venue';
+  else if(hash==='#festivals')$('category').value='festival';
   render();
+  if(['#venues','#festivals','#all-opportunities'].includes(hash))
+   requestAnimationFrame(()=>$(hash.slice(1)).scrollIntoView({block:'start'}));
  }catch(e){
   $('festivalRows').replaceChildren();$('venueRows').replaceChildren();
   $('festivalEmpty').hidden=false;$('venueEmpty').hidden=false;
@@ -161,6 +177,11 @@ async function load(){
   $('status').textContent='The external opportunity feed cannot be loaded right now. Please use the main booking hub.';
  }
 }
-$('search').addEventListener('input',render);$('category').addEventListener('change',render);load();
+$('search').addEventListener('input',render);$('category').addEventListener('change',render);
+document.querySelectorAll('.stat-link').forEach(a=>a.addEventListener('click',()=>{
+ $('category').value=a.dataset.filter||'';
+ render();
+}));
+load();
 })();
 </script></body></html>
