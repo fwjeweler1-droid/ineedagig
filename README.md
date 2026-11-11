@@ -101,3 +101,20 @@ Charlie approved the 47 sourced listings for publication and a daily morning dir
 ## Nationwide external musician booking sources — November 11, 2026
 
 The public-source directory now includes **49 distinct external performer-booking pages**, grouped into full bands/ensembles and soloists/duos/flexible lineups. Homepage link: `external-performers.html`; public data: `external-performers.json`. The existing `artists.html` still shows **only** approved/owner-published Connect profiles, and the new external directory never creates or mirrors member profiles, booking records, messages or personal contact details. Listings are factual reference links to professional public booking pages and do **not** imply affiliated/registered musicians, guaranteed availability or a booking. Review frequency is the existing Morning Start daily task; see `EXTERNAL_PERFORMERS_WORKFLOW.md`. No direct outreach is authorized. Public source review is time-limited and old entries hide after 45 days unless rechecked.
+
+
+## November 11, 2026 — Restore the two-door mobile front page
+
+**Canonical UX:** `index.html` is now ONLY the two-choice front door, with approved FROG / Ineeda images and no expanded site navigation or directory blocks. Choices are **I'm an artist / musician** → `musicians.html`, and **I'm hiring** → `venues.html`. Both are deliberately compact, responsive pages; no signup or venue booking system was duplicated.
+
+**Musicians:** `musicians.html` hosts publicly open, future Connect venue booking offers (existing anon-safe feed), source-linked nationwide gigs (`regional-opportunities.html`), a link to free Connect login/profile signup, existing members-only gig requests, and **the existing manual social-sharing widget**. These were moved out of the homepage. No private venue data or member-only requests become publicly readable.
+
+**Venues:** `venues.html` offers public free search via `artists.html` (owner-approved Connect artist showcases) and `external-performers.html` (outside musicians/booking reference sources), plus the existing venue-posting route to Connect `fill-my-stage.html`. Outside acts are not automatically Connect members and their availability is unverified. Member-only advanced search requires a free Connect login.
+
+**Information, prices and mascot dialogue:** remain on the existing `free-vs-paid.html` page, not on the opening page. Policies remain linked, including the official privacy statement.
+
+**Old URLs:** query-string `?booking=<UUID>` and former section anchors on the homepage redirect client-side to the corresponding dedicated page, preserving existing shared-booking behavior. Newly generated public share links now point to `musicians.html?booking=<UUID>#opportunities`. Links in existing external directory pages were redirected to `musicians.html#opportunities` or `#member-requests`.
+
+**Checks before acceptance:** static DOM, role links, API/script element IDs, JS syntax, URL deep-link safety, GitHub Pages deployment success, plus manual phone/desktop observation of card visibility and link operation. Auth/RLS, the Supabase schema, venues, music assets, branding image files, the member directory and outreach records are unchanged.
+
+This structural correction supersedes previous descriptions of sections hosted directly on the homepage; older workflow notes below are historic and may mention the old anchors.
