@@ -29,3 +29,10 @@ The user previously approved **considering personalized invitations** using publ
 - Stale/invalid data is not shown; malformed JSON failure is honest.
 - Phone and desktop mobile scroll/table navigation, text contrast, and keyboard access; public GitHub Pages deploy and HTTPS must be checked independently.
 - If a verified original source requires sign-in or quotes, say so; do not claim external platform bookings are free or executed inside IneedaGig.
+
+
+## Canada expansion checkpoint — November 11, 2026
+
+The public external performer search now covers **United States and Canada**. Eighteen original Canadian artist booking-source entries were added from official public booking pages, spanning Ontario, Québec, British Columbia, Manitoba and Nova Scotia. The feed now contains **67 entries (49 prior U.S. + 18 Canada)**. One pre-existing U.S. entry marked `review_required` remains excluded by the browser, so the current visible directory contains **66** source links. This is a deliberate review gate, not missing data. The newly added Canadian entries are visible by searching `Canada`.
+
+Continue the existing Morning Start checking and discovery in **both countries**, preserving original URLs, no duplicate artist identities, no presumed availability, no invitations without explicit review, and no changes to Connect members' private profiles. If an artist requests correction/removal, honor the verified ownership request. Canadian provincial and cross-border booking conditions must not be presented as verified by this catalog.
