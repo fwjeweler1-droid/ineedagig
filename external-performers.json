@@ -516,10 +516,10 @@
       "location": "Atlanta, GA",
       "genre": "R&B / soul",
       "format": "solo",
-      "source_url": "https://www.dondria.com/",
-      "summary": "Official artist booking inquiries",
+      "source_url": "https://www.dondria.com/booking",
+      "summary": "Official booking page for live performances, festivals and private events; availability and pricing require inquiry.",
       "reviewed_on": "2026-11-11",
-      "status": "review_required"
+      "status": "external_booking_source"
     },
     {
       "id": "external-artist-20261111-048",
