@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#102c21">
-<meta name="description" content="IneedaGig: find live music opportunities or hire musicians and bands. Two simple paths.">
+<meta name="description" content="IneedaGig: find live music opportunities or hire musicians and bands. Three simple choices.">
 <title>IneedaGig — Find a gig. Find entertainment.</title>
 <style>
 :root{color-scheme:dark;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;--bg:#10281e;--mint:#b5e59d;--gold:#f1c783;--cream:#fff9ed;--border:#769b78}
@@ -12,7 +12,7 @@
 header{border-bottom:1px solid #53775a}header .wrap{padding:16px 0}.logo{font-size:1.55rem;letter-spacing:-.06em;font-weight:900;color:var(--cream);text-decoration:none}.logo b{color:var(--gold)}
 main{width:100%;flex:1;display:flex;align-items:center;justify-content:center;padding:30px 0 42px}
 h1{font-size:clamp(1.85rem,5vw,3.5rem);line-height:1.1;text-align:center;letter-spacing:-.04em;margin:12px 0 26px}
-.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:880px;margin:auto}
+.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:880px;margin:auto}
 .choice{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;min-height:310px;padding:18px 16px;gap:14px;background:linear-gradient(155deg,#284e37,#1b382a);border:2px solid #8eb182;border-radius:20px;color:var(--cream);text-decoration:none;text-align:center;box-shadow:0 10px 35px #05170b55}
 .choice.hiring{background:linear-gradient(155deg,#58482d,#2d402c);border-color:#bca16c}
 .choice img{display:block;max-width:100%;width:220px;height:220px;object-fit:contain}
@@ -24,7 +24,7 @@ footer{border-top:1px solid #52745b;padding:16px 0;color:#c9d9c7;font-size:.86re
 @media(max-width:360px){.choice{min-height:106px}.choice img{width:84px;height:84px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-/* IneedaGig swamp-and-gold entrance; two original choices and URLs unchanged. */
+/* Preserve the published swamp-and-gold theme and approved category mascots. */
 body{background:radial-gradient(ellipse at 5% 92%,#294d33 0%,transparent 40%),radial-gradient(ellipse at 87% 15%,#285a40 0%,transparent 53%),linear-gradient(180deg,#10261b 0%,#132f24 62%,#0b1d16 100%)}
 header,footer{background:linear-gradient(90deg,#142d21,#203d2b 52%,#142d21)}
 .choice{background:linear-gradient(148deg,#335e3d 0%,#244631 55%,#183326 100%);border-color:#96b77e;box-shadow:0 14px 34px #05170b70,inset 0 0 0 1px #d2cc8333}
@@ -37,8 +37,9 @@ header,footer{background:linear-gradient(90deg,#142d21,#203d2b 52%,#142d21)}
 <main id="book"><div class="wrap">
 <h1>What are you looking for?</h1>
 <nav class="choices" aria-label="Choose your path">
-<a class="choice" href="musicians.html"><img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="" loading="eager" width="900" height="900"><span>I'm an artist / musician</span></a>
+<a class="choice" href="https://connect.intentionalnoise.info/auth.html?role=musician#auth"><img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="" loading="eager" width="900" height="900"><span>I'm an artist / musician</span></a>
 <a class="choice hiring" href="venues.html"><img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="" loading="eager" width="1254" height="1254"><span>I'm hiring</span></a>
+<a class="choice instructor" href="https://connect.intentionalnoise.info/auth.html?role=instructor#auth"><img src="https://connect.intentionalnoise.info/Testerosa_Instructor_APPROVED_2026-11-12.webp" alt="Testerosa, the Instructor mascot" loading="eager" width="1000" height="750"><span>Instructor</span></a>
 </nav>
 </div></main>
 <footer><div class="wrap"><a href="free-vs-paid.html">What's free?</a><a href="https://intentionalnoise.info/privacy.html">Privacy</a></div></footer>
@@ -56,3 +57,4 @@ header,footer{background:linear-gradient(90deg,#142d21,#203d2b 52%,#142d21)}
 </script>
 </body>
 </html>
+
