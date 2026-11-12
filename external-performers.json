@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "updated_on": "2026-11-12",
-  "scope": "United States and Canada",
+  "scope": "United States, Canada, United Kingdom, Australia, Ireland and Serbia",
   "disclaimer": "External public booking-source references only; no availability guaranteed and none of these performers is represented as an IneedaGig/Connect member.",
   "artists": [
     {
@@ -749,6 +749,50 @@
       "format": "duo",
       "source_url": "https://www.the-heists.com/",
       "summary": "Alaska acoustic duo with an official public booking-inquiry route; dates and terms require inquiry.",
+      "reviewed_on": "2026-11-12",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-gb-20261112-001",
+      "name": "Truly Medley Deeply",
+      "location": "United Kingdom",
+      "genre": "Pop / disco / soul / rock medleys",
+      "format": "flexible",
+      "source_url": "https://www.trulymedleydeeply.com/contact",
+      "summary": "UK-based medley duo with saxophone and larger lineups by request; official booking contact page.",
+      "reviewed_on": "2026-11-12",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-au-20261112-001",
+      "name": "Baker Boys Band",
+      "location": "Australia — multiple cities",
+      "genre": "Party / wedding / event music",
+      "format": "band",
+      "source_url": "https://www.bakerboysband.com.au/contact",
+      "summary": "Custom 3–14-piece event band; official inquiry form, with date, lineup and quote confirmed directly.",
+      "reviewed_on": "2026-11-12",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-ie-20261112-001",
+      "name": "Spring Break",
+      "location": "Ireland",
+      "genre": "Pop / rock / party covers",
+      "format": "band",
+      "source_url": "https://springbreak80s.com/contact/",
+      "summary": "Official booking route for private parties, weddings and charity events; dates and terms require inquiry.",
+      "reviewed_on": "2026-11-12",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-rs-20261112-001",
+      "name": "Profesori Band",
+      "location": "Belgrade, Serbia",
+      "genre": "Pop / rock / disco",
+      "format": "band",
+      "source_url": "https://en.profesori.rs/kontakt",
+      "summary": "Six-member Belgrade band; official booking contact and inquiry page.",
       "reviewed_on": "2026-11-12",
       "status": "external_booking_source"
     }

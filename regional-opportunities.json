@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "updated_on": "2026-11-12",
-  "scope": "United States and Canada",
+  "scope": "United States, Canada, United Kingdom, Australia, Ireland and Serbia",
   "review_source": "Organizer-controlled performer submission/application pages; opening dates not guaranteed",
   "opportunities": [
     {
@@ -1026,6 +1026,64 @@
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
       "submission_type": "Application / audition"
+    },
+    {
+      "id": "ig-gb-20261112-venue-01",
+      "category": "venue",
+      "organizer": "Green Note",
+      "location": "London, UK",
+      "title": "Artist booking inquiries",
+      "summary": "Folk, blues, jazz, world and roots artists; email-only submissions with music/live-video links. No large attachments or phone follow-ups.",
+      "source_url": "https://www.greennote.co.uk/info-for-musicians/",
+      "verified_on": "2026-11-12",
+      "approval_status": "approved",
+      "approved_by_owner": true,
+      "source_kind": "official organizer submission page",
+      "submission_type": "Rolling venue inquiry"
+    },
+    {
+      "id": "ig-au-20261112-venue-01",
+      "category": "venue",
+      "organizer": "The Savoy Bar and Music",
+      "location": "Long Jetty, NSW, Australia",
+      "title": "Submit your act",
+      "summary": "Local and touring soloists, duos and bands; originals or covers. Dedicated performer form for future programming; dates require confirmation.",
+      "source_url": "https://www.thesavoybarandmusic.com.au/submit-your-act",
+      "verified_on": "2026-11-12",
+      "approval_status": "approved",
+      "approved_by_owner": true,
+      "source_kind": "official organizer submission page",
+      "submission_type": "Rolling venue inquiry"
+    },
+    {
+      "id": "ig-ie-20261112-venue-01",
+      "category": "venue",
+      "organizer": "Other Voices",
+      "location": "Dingle / multiple events, Ireland",
+      "title": "Rolling artist submissions",
+      "summary": "Year-round music submissions for Other Voices events through its official artist form; not a confirmed booking or vacant performance date.",
+      "source_url": "https://www.othervoices.ie/submissions",
+      "verified_on": "2026-11-12",
+      "approval_status": "approved",
+      "approved_by_owner": true,
+      "source_kind": "official organizer submission page",
+      "submission_type": "Rolling programme inquiry"
+    },
+    {
+      "id": "ig-rs-20261112-festival-01",
+      "category": "festival",
+      "organizer": "URMUS / BARF15",
+      "location": "Belgrade, Serbia",
+      "title": "2026 original rock festival competition",
+      "summary": "Serbia-based bands/authors only; 3 original songs without prior physical/digital release; 1,000 RSD entry fee. Organizer form and payment-proof requirement.",
+      "source_url": "https://urmus.rs/festival-barf/barf-2026/",
+      "application_deadline": "2026-11-15",
+      "event_date": "2026-12-06",
+      "verified_on": "2026-11-12",
+      "approval_status": "approved",
+      "approved_by_owner": true,
+      "source_kind": "official organizer submission page",
+      "submission_type": "Application / competition"
     }
   ]
 }
