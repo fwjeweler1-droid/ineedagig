@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-12",
+  "updated_on": "2026-11-13",
   "scope": "United States, Canada, United Kingdom, Australia, Ireland and Serbia",
   "disclaimer": "External public booking-source references only; no availability guaranteed and none of these performers is represented as an IneedaGig/Connect member.",
   "artists": [
@@ -12,7 +12,7 @@
       "format": "duo",
       "source_url": "https://www.thebash.com/singing-pianist/old-heimers",
       "summary": "Local duo offering event music",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -23,7 +23,7 @@
       "format": "band",
       "source_url": "https://www.thebash.com/variety-band/the-super-kools",
       "summary": "Event and party band",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -34,7 +34,7 @@
       "format": "flexible",
       "source_url": "https://www.thebash.com/variety-band/ty-causey",
       "summary": "Singer and live entertainment",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -45,7 +45,7 @@
       "format": "band",
       "source_url": "https://www.thebash.com/cover-band/off-the-hook-indy",
       "summary": "Party and event performances",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -56,7 +56,7 @@
       "format": "band",
       "source_url": "https://www.thebash.com/celtic-band/stringtown-trio",
       "summary": "Celtic roots trio",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -78,7 +78,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/the_tejas_mariachi_austin",
       "summary": "Mariachi ensemble; nationwide travel advertised",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -89,7 +89,7 @@
       "format": "duo",
       "source_url": "https://www.gigsalad.com/the_mckinleys_austin",
       "summary": "Bluegrass event music",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -100,7 +100,7 @@
       "format": "flexible",
       "source_url": "https://www.gigsalad.com/samjohnson",
       "summary": "Solo and band booking profile",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -111,7 +111,7 @@
       "format": "flexible",
       "source_url": "https://www.gigsalad.com/cecy_santana_chicago",
       "summary": "Live cover and event music",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -122,7 +122,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/chicago_rock_exchange_winnetka",
       "summary": "Classic rock group",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -133,7 +133,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/windy_city_strings_chicago",
       "summary": "String ensemble for events",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -144,7 +144,7 @@
       "format": "flexible",
       "source_url": "https://www.gigsalad.com/raleigh_keegan",
       "summary": "Country artist and band",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -155,7 +155,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/justin_the_swingbeats_las_vegas",
       "summary": "Party and swing performances",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -166,7 +166,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/tom_fryefrye_family_band_bryant",
       "summary": "Gospel and family band",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -177,7 +177,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/good_co_seattle",
       "summary": "Swing and event band",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -188,7 +188,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/theapollotrio",
       "summary": "Jazz trio with event booking",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -199,7 +199,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/eden_lane_jazz_band_seattle",
       "summary": "Jazz and event music",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -210,7 +210,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/the_keene_singers_beverly_hills",
       "summary": "Custom vocal ensembles and choirs",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -221,7 +221,7 @@
       "format": "flexible",
       "source_url": "https://www.gigsalad.com/denver_jazz_quartet_and_soloist_littleton",
       "summary": "Jazz quartet or soloist",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -232,7 +232,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/gbeaudoin",
       "summary": "Jazz trio",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -243,7 +243,7 @@
       "format": "duo",
       "source_url": "https://www.gigsalad.com/the_bill_mcgoldrick_acoustic_duo_-_featuring",
       "summary": "Acoustic duo featuring Lauren Scudder",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -254,7 +254,7 @@
       "format": "flexible",
       "source_url": "https://www.gigsalad.com/mike_mcleod_music_atlanta",
       "summary": "Live acoustic and group options",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -265,7 +265,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/the_hits_squad_alpharetta",
       "summary": "Classic rock band",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -276,7 +276,7 @@
       "format": "flexible",
       "source_url": "https://www.gigsalad.com/jmeel_atlanta",
       "summary": "Solo and group event music",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -287,7 +287,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/used_groove_atlanta",
       "summary": "Variety band",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -298,7 +298,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/orlando_contreras_jr_miami",
       "summary": "Latin live music",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -309,7 +309,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/main_event_entertainment_group_miami",
       "summary": "Brass and event ensemble",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -320,7 +320,7 @@
       "format": "duo",
       "source_url": "https://www.gigsalad.com/daughter_dad_live_music_miami",
       "summary": "Family acoustic duo",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -331,7 +331,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/mariachi_ases_de_mexico_hollywood",
       "summary": "Mariachi music for events",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -342,7 +342,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/shake_rattle_roll_pianos_-_midwest_col",
       "summary": "Interactive piano entertainment",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -353,7 +353,7 @@
       "format": "duo",
       "source_url": "https://www.gigsalad.com/prickly_pair_jazz",
       "summary": "Jazz guitar and bass duo",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -364,7 +364,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/nuance_jazz_phoenix",
       "summary": "Jazz ensemble",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -375,7 +375,7 @@
       "format": "flexible",
       "source_url": "https://www.gigsalad.com/jt_trawick_portland",
       "summary": "Country singer and band",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -386,7 +386,7 @@
       "format": "solo",
       "source_url": "https://www.gigsalad.com/dan_schlesinger_portland",
       "summary": "Solo jazz musician",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -397,7 +397,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/mariachi_king",
       "summary": "Mariachi group",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -408,7 +408,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/mark_the_evening_beat",
       "summary": "Swing and event band",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -419,7 +419,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/adam_moezinia_trio_new_york_city",
       "summary": "Jazz trio for events",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -430,7 +430,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/the_tee-tones_new_york_city",
       "summary": "Motown group",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -441,7 +441,7 @@
       "format": "duo",
       "source_url": "https://www.gigsalad.com/3_west_lancaster",
       "summary": "Acoustic group",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -452,7 +452,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/the_telesmar_trio_newhall",
       "summary": "Jazz trio",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -463,7 +463,7 @@
       "format": "ensemble",
       "source_url": "https://www.gigsalad.com/cuarteto_guataca_new_york_city",
       "summary": "Latin ensemble",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -474,7 +474,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/cold_weather_company_new_brunswick",
       "summary": "Acoustic indie group",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -485,7 +485,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/nadine_and_her_soul_of_new_york_band",
       "summary": "Soul and party band",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -496,7 +496,7 @@
       "format": "band",
       "source_url": "https://www.gigsalad.com/the_niche_fort_lee",
       "summary": "Wedding and event band",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -507,7 +507,7 @@
       "format": "band",
       "source_url": "https://falkynband.com/booking-inquiry/",
       "summary": "Official booking inquiry form",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -518,7 +518,7 @@
       "format": "solo",
       "source_url": "https://www.dondria.com/booking",
       "summary": "Official booking page for live performances, festivals and private events; availability and pricing require inquiry.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -529,7 +529,7 @@
       "format": "band",
       "source_url": "https://tantricofficial.com/",
       "summary": "Official band booking inquiries",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -540,7 +540,7 @@
       "format": "ensemble",
       "source_url": "https://theplatters.com/",
       "summary": "Official band performance booking inquiries",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -551,7 +551,7 @@
       "format": "band",
       "source_url": "https://www.theacproject.ca/booking-inquiry",
       "summary": "Toronto live band taking event, wedding and concert inquiries.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -562,7 +562,7 @@
       "format": "band",
       "source_url": "https://www.thecovernotes.ca/",
       "summary": "Ontario cover band with a public event-booking contact.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -573,7 +573,7 @@
       "format": "band",
       "source_url": "https://memorylanetoronto.com/contact",
       "summary": "Event and wedding band offering booking inquiries.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -584,7 +584,7 @@
       "format": "band",
       "source_url": "https://soular.ca/contact/",
       "summary": "Live group with an event quotation and contact form.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -595,7 +595,7 @@
       "format": "band",
       "source_url": "https://chandraraye.ca/book-us",
       "summary": "Toronto funk and soul group with a public booking request.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -606,7 +606,7 @@
       "format": "ensemble",
       "source_url": "https://vancouverjazz.ca/contact/",
       "summary": "Trio accepting private and corporate event requests.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -617,7 +617,7 @@
       "format": "ensemble",
       "source_url": "https://www.stolenmomentsjazz.ca/",
       "summary": "Vancouver jazz trio offering event-date inquiries and flexible lineups.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -628,7 +628,7 @@
       "format": "ensemble",
       "source_url": "https://vancouverjazzorchestra.ca/contact/",
       "summary": "Large jazz ensemble with 7-, 10- and 17-piece booking formats.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -639,7 +639,7 @@
       "format": "ensemble",
       "source_url": "https://fullhousejazz.ca/",
       "summary": "Big band inviting private-event and community performance bookings.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -650,7 +650,7 @@
       "format": "band",
       "source_url": "https://www.getambushed.com/",
       "summary": "Touring live band accepting festivals, fairs and private event inquiries.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -661,7 +661,7 @@
       "format": "solo",
       "source_url": "https://gkhmusic.ca/",
       "summary": "Ottawa musician offering performance-booking inquiries.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -672,7 +672,7 @@
       "format": "band",
       "source_url": "https://scottkellyandthedynamics.ca/contact",
       "summary": "Ottawa band accepting original-music and cover-set bookings.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -683,7 +683,7 @@
       "format": "flexible",
       "source_url": "https://andymacdonaldmusic.ca/reservation/",
       "summary": "Montréal bandleader offering solo through small-group jazz engagements.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -694,7 +694,7 @@
       "format": "flexible",
       "source_url": "https://jenniferhanson.ca/make-a-booking",
       "summary": "Winnipeg performer offering several band and trio formats for events.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -705,7 +705,7 @@
       "format": "ensemble",
       "source_url": "https://www.goldstreamquartet.com/booking-info/",
       "summary": "Victoria-based string ensemble with an event-quote request.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -716,7 +716,7 @@
       "format": "band",
       "source_url": "https://www.shenanigansband.ca/",
       "summary": "Victoria live band with a public event-booking inquiry.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -727,7 +727,7 @@
       "format": "duo",
       "source_url": "https://thefinetuners.ca/booking-weddings-for-2027-2027-voted-best-in-wedding-entertainment-2025/",
       "summary": "Halifax violin and DJ duo inviting 2026–27 event inquiries.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -738,7 +738,7 @@
       "format": "solo",
       "source_url": "https://tktheartistmusic.com/contact/",
       "summary": "Victoria performer accepting festivals, event and collaboration bookings.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -749,7 +749,7 @@
       "format": "duo",
       "source_url": "https://www.the-heists.com/",
       "summary": "Alaska acoustic duo with an official public booking-inquiry route; dates and terms require inquiry.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -760,7 +760,7 @@
       "format": "flexible",
       "source_url": "https://www.trulymedleydeeply.com/contact",
       "summary": "UK-based medley duo with saxophone and larger lineups by request; official booking contact page.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -771,7 +771,7 @@
       "format": "band",
       "source_url": "https://www.bakerboysband.com.au/contact",
       "summary": "Custom 3–14-piece event band; official inquiry form, with date, lineup and quote confirmed directly.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -782,7 +782,7 @@
       "format": "band",
       "source_url": "https://springbreak80s.com/contact/",
       "summary": "Official booking route for private parties, weddings and charity events; dates and terms require inquiry.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     },
     {
@@ -793,7 +793,18 @@
       "format": "band",
       "source_url": "https://en.profesori.rs/kontakt",
       "summary": "Six-member Belgrade band; official booking contact and inquiry page.",
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-13",
+      "status": "external_booking_source"
+    },
+    {
+      "id": "external-rs-20261113-001",
+      "name": "CHEGI BEND",
+      "location": "Belgrade, Serbia",
+      "genre": "Serbian / international wedding repertoire",
+      "format": "band",
+      "source_url": "https://chegi-bend.rs/kontakt-bend-za-svadbe",
+      "summary": "12-musician wedding and event band; full lineup only. Official public booking instructions available in Serbian.",
+      "reviewed_on": "2026-11-13",
       "status": "external_booking_source"
     }
   ]
