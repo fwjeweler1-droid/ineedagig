@@ -48,7 +48,7 @@ button:disabled{opacity:.55;cursor:wait}.searchbar input{flex:1 1 240px;min-heig
 <main class="wrap">
 <section aria-labelledby="title"><div class="eyebrow">For artists and musicians</div><h1 id="title">Find a gig.</h1>
 
-<div class="actions"><a class="btn mint" href="https://connect.intentionalnoise.info/auth.html?role=musician#auth">Sign up / sign in free</a><a class="btn alt" href="regional-opportunities.html">Nationwide opportunities</a></div>
+<div class="actions"><a class="btn mint" href="https://www.connect.intentionalnoise.info/auth.html?role=musician#auth">Sign up / sign in free</a><a class="btn alt" href="regional-opportunities.html">Nationwide opportunities</a></div>
 <nav class="opportunity-shortcuts" aria-label="Jump to nationwide opportunity lists">
 <a class="opportunity-shortcut" href="regional-opportunities.html#all-opportunities"><b id="nationwideTotal">—</b><span>All nationwide opportunities</span></a>
 <a class="opportunity-shortcut" href="regional-opportunities.html#venues"><b id="nationwideVenues">—</b><span>Venue inquiries</span></a>
@@ -64,10 +64,10 @@ button:disabled{opacity:.55;cursor:wait}.searchbar input{flex:1 1 240px;min-heig
 <div id="bookingCards" class="cards"></div>
 </section>
 <section aria-label="Other music opportunities"><div class="panel"><h2>More places to look</h2>
-<div class="actions"><a class="btn alt" href="regional-opportunities.html">Festivals &amp; venue submissions nationwide</a><a class="btn alt" id="memberBrowse" href="https://connect.intentionalnoise.info/gig-requests.html">Member-only band &amp; gig requests</a></div>
+<div class="actions"><a class="btn alt" href="regional-opportunities.html">Festivals &amp; venue submissions nationwide</a><a class="btn alt" id="memberBrowse" href="https://www.connect.intentionalnoise.info/gig-requests.html">Member-only band &amp; gig requests</a></div>
 </div></section>
 <section id="member-requests" aria-labelledby="member-requests-title"><h2 id="member-requests-title">Connect member requests</h2>
-<p class="detail">Band openings and other member requests require a free Connect login.</p><div class="panel"><a class="btn mint" href="https://connect.intentionalnoise.info/gig-requests.html">Sign in to member requests</a><div class="booking-roles"></div></div>
+<p class="detail">Band openings and other member requests require a free Connect login.</p><div class="panel"><a class="btn mint" href="https://www.connect.intentionalnoise.info/gig-requests.html">Sign in to member requests</a><div class="booking-roles"></div></div>
 </section>
 <section id="social" aria-labelledby="social-title">
 <h2 id="social-title">Share an open gig</h2>
@@ -87,7 +87,7 @@ button:disabled{opacity:.55;cursor:wait}.searchbar input{flex:1 1 240px;min-heig
 'use strict';
 const API='https://xyudcdgjyormlokwhfoi.supabase.co/rest/v1/venue_booking_requests';
 const KEY='sb_publishable_-gMviWXPBzov-2D-htf9iA_y6ZVV-q0';
-const CONNECT='https://connect.intentionalnoise.info/fill-my-stage.html';
+const CONNECT='https://www.connect.intentionalnoise.info/fill-my-stage.html';
 const PUBLIC_HOME='https://ineedagig.net/musicians.html';
 const $=id=>document.getElementById(id);
 let rows=[],selected=null;
@@ -178,7 +178,7 @@ $('filter').addEventListener('input',render);
 $('refresh').addEventListener('click',load);
 const memberKeyword=(new URLSearchParams(location.search).get('q')||'').slice(0,100);
 if(memberKeyword){
- $('memberBrowse').href='https://connect.intentionalnoise.info/gig-requests.html?q='+encodeURIComponent(memberKeyword);
+ $('memberBrowse').href='https://www.connect.intentionalnoise.info/gig-requests.html?q='+encodeURIComponent(memberKeyword);
  const note=textElement('p','Your keyword will carry to the signed-in Connect member board: '+memberKeyword,'detail');
  $('member-requests').insertBefore(note,$('member-requests').querySelector('.booking-roles'));
 }
