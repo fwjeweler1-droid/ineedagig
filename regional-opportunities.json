@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_on": "2026-11-13",
+  "updated_on": "2026-11-14",
   "scope": "United States, Canada, United Kingdom, Australia, Ireland and Serbia",
   "review_source": "Organizer-controlled performer submission/application pages; opening dates not guaranteed",
   "opportunities": [
@@ -266,10 +266,12 @@
       "summary": "Solo, duo and band inquiries for Friday Night Live and outdoor events.",
       "source_url": "https://utepilsbrewing.com/entertainment-inquiry/",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "organizer submission page",
-      "submission_type": "Rolling venue inquiry"
+      "submission_type": "Rolling venue inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-us-20261111-19",
@@ -378,10 +380,12 @@
       "summary": "Mostly original family-friendly Americana, blues, roots and related acts; dedicated booking form.",
       "source_url": "https://bigrailbrewing.com/music-booking/",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "organizer submission page",
-      "submission_type": "Rolling venue inquiry"
+      "submission_type": "Rolling venue inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-us-20261111-27",
@@ -448,10 +452,12 @@
       "summary": "Artists and bands for Lounge/Theatre bookings, including national support slots.",
       "source_url": "https://hawthornetheatre.com/booking/",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "organizer submission page",
-      "submission_type": "Rolling venue inquiry"
+      "submission_type": "Rolling venue inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-us-20261111-32",
@@ -476,10 +482,12 @@
       "summary": "Musicians, DJs, comedians and bands for future shows; performer inquiry.",
       "source_url": "https://generalduffys.com/inquiry",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "organizer submission page",
-      "submission_type": "Rolling venue inquiry"
+      "submission_type": "Rolling venue inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-us-20261111-34",
@@ -490,10 +498,12 @@
       "summary": "Original and cover acts; outdoor covered pavilion, spring through fall.",
       "source_url": "https://backyardtaphouse.com/bookyourshow/",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "organizer submission page",
-      "submission_type": "Rolling venue inquiry"
+      "submission_type": "Rolling venue inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-us-20261111-35",
@@ -504,10 +514,12 @@
       "summary": "Booking inquiries for Top Hat, Wilma, KettleHouse and ELM; three-month lead time.",
       "source_url": "https://logjampresents.com/booking-information/",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "organizer submission page",
-      "submission_type": "Rolling venue inquiry"
+      "submission_type": "Rolling venue inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-us-20261111-36",
@@ -574,10 +586,12 @@
       "summary": "Musicians of all genres for regular Friday and occasional Saturday shows.",
       "source_url": "https://www.fretwellspartanburg.com/artist-signup",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "organizer submission page",
-      "submission_type": "Rolling venue inquiry"
+      "submission_type": "Rolling venue inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-us-20261111-41",
@@ -672,10 +686,12 @@
       "summary": "Artist inquiries for music at either Sierra Nevada venue.",
       "source_url": "https://sierranevada.com/contact-us/artist-inquiry",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "organizer submission page",
-      "submission_type": "Rolling venue inquiry"
+      "submission_type": "Rolling venue inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-us-20261111-48",
@@ -852,10 +868,12 @@
       "summary": "Calgary music venue's band-booking form requests artist details and preferred show dates.",
       "source_url": "https://kingeddy.ca/contact/",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
-      "submission_type": "Rolling artist inquiry"
+      "submission_type": "Rolling artist inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-ca-20261111-venue-05",
@@ -894,10 +912,12 @@
       "summary": "Solo artists, duos and bands can apply for Saturday afternoon music programming.",
       "source_url": "https://thirstybutler.ca/band",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
-      "submission_type": "Rolling artist inquiry"
+      "submission_type": "Rolling artist inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-ca-20261111-venue-08",
@@ -908,10 +928,12 @@
       "summary": "Victoria live-music venue accepts proposed performance dates and artist media through its form.",
       "source_url": "https://upstairs.ca/band-bookings/",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
-      "submission_type": "Rolling artist inquiry"
+      "submission_type": "Rolling artist inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-ca-20261111-venue-09",
@@ -950,10 +972,12 @@
       "summary": "Independent concert promoter invites bands to submit for consideration at future shows; not a confirmed opening.",
       "source_url": "https://reallovewpg.com/Contact",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
-      "submission_type": "Rolling artist inquiry"
+      "submission_type": "Rolling artist inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-ca-20261111-venue-12",
@@ -978,10 +1002,12 @@
       "summary": "Edmonton music venue offers a direct booking-inquiry route for bands and performers.",
       "source_url": "https://cookcountysaloon.com/contact-us/",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
-      "submission_type": "Rolling artist inquiry"
+      "submission_type": "Rolling artist inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-ca-20261111-venue-14",
@@ -1006,10 +1032,12 @@
       "summary": "Halifax community art and music space provides a channel for show and rehearsal inquiries.",
       "source_url": "https://www.radstorm.org/contact/",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
-      "submission_type": "Rolling artist inquiry"
+      "submission_type": "Rolling artist inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 406. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-us-20261112-01",
@@ -1036,10 +1064,12 @@
       "summary": "Folk, blues, jazz, world and roots artists; email-only submissions with music/live-video links. No large attachments or phone follow-ups.",
       "source_url": "https://www.greennote.co.uk/info-for-musicians/",
       "verified_on": "2026-11-13",
-      "approval_status": "approved",
+      "approval_status": "review_required",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
-      "submission_type": "Rolling venue inquiry"
+      "submission_type": "Rolling venue inquiry",
+      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-14"
     },
     {
       "id": "ig-au-20261112-venue-01",
@@ -1099,6 +1129,23 @@
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
       "submission_type": "2027 festival music application"
+    },
+    {
+      "id": "ig-gb-20261114-venue-01",
+      "category": "venue",
+      "organizer": "Bennigans Bar & Jazz Club",
+      "location": "Londonderry, Northern Ireland, United Kingdom",
+      "title": "Band submissions / artist inquiry",
+      "summary": "Official band-submission instructions request music, biography, performance, press, social and website links; no attachments. Contact form available. This is an inquiry route, not a confirmed open gig.",
+      "source_url": "https://bennigansbar.com/contact",
+      "inquiry_url": "https://bennigansbar.com/contact",
+      "inquiry_route": "Official inline contact form and band-submission instructions",
+      "source_evidence": "Direct HTTP 200 on November 14, 2026; Band Submissions section and Name/Email/Message form present. No form sent and no delivery or availability tested.",
+      "verified_on": "2026-11-14",
+      "approval_status": "approved",
+      "approved_by_owner": true,
+      "source_kind": "official venue band-submission page",
+      "submission_type": "Rolling artist inquiry"
     }
   ]
 }
