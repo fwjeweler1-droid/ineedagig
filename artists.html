@@ -53,16 +53,16 @@ header{background:#10261b}.card,.profile{background:#1b3429;border-color:#688969
 @media(max-width:560px){.artwork{aspect-ratio:16/9}}
 .verified-icon{display:inline-block;width:1.18em;height:1.18em;object-fit:contain;vertical-align:middle;margin-left:.18em}
 </style><link rel="canonical" href="https://ineedagig.net/artists.html"><meta name="robots" content="index,follow"><meta property="og:type" content="website"><meta property="og:site_name" content="IneedaGig™"><meta property="og:title" content="Published Artists | IneedaGig™"><meta property="og:description" content="Browse independent musicians and bands with published artist profiles across Intentional Noise."><meta property="og:url" content="https://ineedagig.net/artists.html"><meta name="twitter:card" content="summary"></head>
-<body><header><nav class="wrap"><a class="name" href="https://ineedagig.net/">IneedaGig<sup style="font-size:.55em;line-height:0;vertical-align:super" aria-hidden="true">™</sup></a><div class="actions"><a href="https://ineedagig.net/venues.html">I’m hiring</a><a href="https://ineedagig.net/musicians.html">Find gigs</a><a href="https://connect.intentionalnoise.info/auth.html?role=musician">Join as a musician</a></div></nav></header>
+<body><header><nav class="wrap"><a class="name" href="https://ineedagig.net/">IneedaGig<sup style="font-size:.55em;line-height:0;vertical-align:super" aria-hidden="true">™</sup></a><div class="actions"><a href="https://ineedagig.net/venues.html">I’m hiring</a><a href="https://ineedagig.net/musicians.html">Find gigs</a><a href="free-vs-paid.html">What’s free?</a></div></nav></header>
 <main class="wrap">
 <div class="eyebrow">Musicians for real stages</div><h1>Published artists</h1>
 <aside class="swamp-guide ineeda" aria-label="Ineeda Gig presents published artists"><img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="Ineeda Gig, the approved booking mascot" loading="lazy" width="1254" height="1254"><div><span class="voice">Ineeda Gig presents</span><strong>Meet the musicians!</strong><p>These artists chose to publish their profiles.</p></div></aside>
 <p class="lead">Discover performing artists and bands with published profiles, then explore current booking opportunities. One Connect account powers the same published profile on this site, IneedaGig, IntentionalNoise.info, and IntentionalNoise.band.</p>
-<div class="actions"><input type="search" id="filter" aria-label="Filter artists" placeholder="Search artist, instrument or genre" maxlength="100"><a class="button alt" href="https://connect.intentionalnoise.info/auth.html?role=musician">Create a free artist account</a></div>
+<div class="actions"><input type="search" id="filter" aria-label="Filter published artist showcases" placeholder="Search artist, instrument or genre" maxlength="100"></div>
 <p class="status" id="status" role="status" aria-live="polite">Loading published profiles…</p>
 <div id="cards" class="cards"></div>
 <div id="profile" class="profile" hidden aria-label="Published artist profile"></div>
-<p class="lead">Artist pages remain private until the owner explicitly publishes them. No private drafts or account email addresses appear here.</p><p class="lead">Looking for acts beyond Connect? <a href="external-performers.html">Explore public external musician booking sources nationwide</a>. These independent artists have not necessarily joined or endorsed IneedaGig.</p>
+<p class="lead">Only owner-published, approved showcases appear here. Private member profiles, studio files and drafts are not displayed. <a href="https://connect.intentionalnoise.info/search.html?category=instructor&amp;distance=any" id="memberInstructorLink" hidden>Browse instructors listed for Connect members (free sign-in required)</a>.</p><p class="lead" id="optionalJoin">Want to publish your own showcase? <a href="https://connect.intentionalnoise.info/auth.html?role=musician#auth">Create a free artist account when you are ready</a>.</p><p class="lead">Looking for acts beyond Connect? <a href="external-performers.html">Explore public external musician booking sources nationwide</a>. These independent artists have not necessarily joined or endorsed IneedaGig.</p>
 </main><footer><div class="wrap">© 2026 Intentional Noise · <a href="https://intentionalnoise.band/artists.html">Public artist showcases</a> · <a href="https://ineedagig.net/">IneedaGig™</a></div></footer>
 <script>
 (function(){
@@ -70,12 +70,26 @@ header{background:#10261b}.card,.profile{background:#1b3429;border-color:#688969
 const API='https://xyudcdgjyormlokwhfoi.supabase.co/rest/v1/artist_pages';
 const KEY='sb_publishable_-gMviWXPBzov-2D-htf9iA_y6ZVV-q0';
 const $=id=>document.getElementById(id);
+const browseInstructors=new URLSearchParams(location.search).get('role')==='instructor';
+if(browseInstructors){
+ document.title='Find Instructors | IneedaGig™';
+ document.querySelector('h1').textContent='Find an Instructor';
+ document.querySelector('.eyebrow').textContent='Browse published teaching showcases';
+ document.querySelector('.swamp-guide img').src='https://connect.intentionalnoise.info/Testerosa_Instructor_APPROVED_2026-11-12.webp';
+ document.querySelector('.swamp-guide img').alt='Testerosa, the approved instructor mascot';
+ document.querySelector('.swamp-guide strong').textContent='Meet the instructors!';
+ document.querySelector('.swamp-guide p').textContent='Browse their owner-published showcases before joining anything.';
+ document.querySelector('p.lead').textContent='Look through public instructor showcases at your own pace. No account is required to browse. Teaching details shared only with Connect members remain behind free member sign-in.';
+ $('filter').placeholder='Search instructor or teaching subject';
+ $('memberInstructorLink').hidden=false;
+ $('optionalJoin').innerHTML='Offer lessons yourself? <a href="https://connect.intentionalnoise.info/auth.html?role=instructor#auth">Create an instructor account only when you choose to</a>.';
+}
 let artists=[];let verifiedArtistIds=new Set();
 function el(tag,txt,cls){const node=document.createElement(tag);if(txt!==undefined)node.textContent=txt;if(cls)node.className=cls;return node}
 function setStatus(text){$('status').textContent=text}
 function link(text,url,cls='button alt'){const a=el('a',text,cls);a.href=url;return a}
 function artistUrl(p){return 'https://intentionalnoise.band/'+encodeURIComponent(p.slug)}
-function profileUrl(p){return location.pathname+'?slug='+encodeURIComponent(p.slug)}
+function profileUrl(p){return location.pathname+'?slug='+encodeURIComponent(p.slug)+(browseInstructors?'&role=instructor':'')}
 const publishedArtwork=new Map();
 function httpsImage(value){try{const u=new URL(value);return u.protocol==='https:'?u.href:null}catch{return null}}
 function firstLetters(name){const parts=String(name||'Artist').trim().split(/\s+/).filter(Boolean);return (parts.length>1?parts.slice(0,2).map(s=>s[0]).join(''):parts[0].slice(0,2)).toUpperCase()}
@@ -148,9 +162,10 @@ function showProfile(p){
 }
 function render(){
  const query=$('filter').value.trim().toLowerCase();
- const matches=artists.filter(p=>[p.display_name,p.bio,...(p.roles||[]),...(p.instruments||[]),...(p.genres||[])].join(' ').toLowerCase().includes(query));
+ const list=browseInstructors?artists.filter(p=>(p.roles||[]).some(r=>['instructor','music_instructor','teacher','teaching'].includes(String(r).toLowerCase()))):artists;
+  const matches=list.filter(p=>[p.display_name,p.bio,...(p.roles||[]),...(p.instruments||[]),...(p.genres||[])].join(' ').toLowerCase().includes(query));
  const root=$('cards');root.replaceChildren(...matches.map(card));
- setStatus(matches.length?matches.length+' published artist'+(matches.length===1?'':'s')+' shown.':'No published profiles match this search.');
+ setStatus(matches.length?matches.length+(browseInstructors?' published instructor showcase':' published artist')+(matches.length===1?'':'s')+' shown.':browseInstructors?'No publicly published instructor showcases match yet. You may also browse member-listed instructors using a free Connect sign-in.':'No published artist profiles match this search.');
 }
 async function load(){
  try{
@@ -167,7 +182,7 @@ async function load(){
     if(badgeRes.ok){const badges=await badgeRes.json();verifiedArtistIds=new Set((Array.isArray(badges)?badges:[]).map(b=>b.user_id));}
   }catch{verifiedArtistIds=new Set();}
   await loadArtwork(data);
-  if(slug){if(artists.length)showProfile(artists[0]);else setStatus('This artist page is private or not published.');return}
+  if(slug){if(artists.length&&(!browseInstructors||(artists[0].roles||[]).some(r=>['instructor','music_instructor','teacher','teaching'].includes(String(r).toLowerCase()))))showProfile(artists[0]);else setStatus('This showcase is not available publicly.');return}
   render();
  }catch(error){setStatus('Could not load artist profiles: '+error.message)}
 }
