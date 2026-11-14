@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /regional-opportunities.html
+Disallow: /external-performers.html
+
+Sitemap: https://ineedagig.net/sitemap.xml
