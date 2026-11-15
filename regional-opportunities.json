@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_on": "2026-11-14",
+  "updated_on": "2026-11-15",
   "scope": "United States, Canada, United Kingdom, Australia, Ireland and Serbia",
   "review_source": "Organizer-controlled performer submission/application pages; opening dates not guaranteed",
   "opportunities": [
@@ -265,13 +265,13 @@
       "title": "Artist booking inquiry",
       "summary": "Solo, duo and band inquiries for Friday Night Live and outdoor events.",
       "source_url": "https://utepilsbrewing.com/entertainment-inquiry/",
-      "verified_on": "2026-11-13",
-      "approval_status": "review_required",
+      "verified_on": "2026-11-15",
+      "approval_status": "approved",
       "approved_by_owner": true,
       "source_kind": "organizer submission page",
       "submission_type": "Rolling venue inquiry",
-      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
-      "last_attempt_on": "2026-11-14"
+      "review_reason": "Restored after direct browser verification on 2026-11-15. Official entertainment-inquiry page opens with performer name, email, music-link, style and event-category fields plus Submit. Page also presents a 21+ age prompt; no age assertion, form entry or submission was performed. Booking is not guaranteed. Prior evidence retained: 2026-11-14 Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-15"
     },
     {
       "id": "ig-us-20261111-19",
@@ -1063,13 +1063,13 @@
       "title": "Artist booking inquiries",
       "summary": "Folk, blues, jazz, world and roots artists; email-only submissions with music/live-video links. No large attachments or phone follow-ups.",
       "source_url": "https://www.greennote.co.uk/info-for-musicians/",
-      "verified_on": "2026-11-13",
-      "approval_status": "review_required",
+      "verified_on": "2026-11-15",
+      "approval_status": "approved",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
       "submission_type": "Rolling venue inquiry",
-      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
-      "last_attempt_on": "2026-11-14"
+      "review_reason": "Restored after direct browser verification on 2026-11-15. Official musician page opens and publishes the email-only booking instruction, music/live-video links, no large attachments and no phone follow-ups. No email was sent; mailbox delivery is untested. Prior evidence retained: 2026-11-14 Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-15"
     },
     {
       "id": "ig-au-20261112-venue-01",
