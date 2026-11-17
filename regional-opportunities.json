@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_on": "2026-11-15",
+  "updated_on": "2026-11-17",
   "scope": "United States, Canada, United Kingdom, Australia, Ireland and Serbia",
   "review_source": "Organizer-controlled performer submission/application pages; opening dates not guaranteed",
   "opportunities": [
@@ -867,13 +867,13 @@
       "title": "Perform at the Eddy",
       "summary": "Calgary music venue's band-booking form requests artist details and preferred show dates.",
       "source_url": "https://kingeddy.ca/contact/",
-      "verified_on": "2026-11-13",
-      "approval_status": "review_required",
+      "verified_on": "2026-11-17",
+      "approval_status": "approved",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
       "submission_type": "Rolling artist inquiry",
-      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
-      "last_attempt_on": "2026-11-14"
+      "review_reason": "Official contact page and Talent Booking Inquiries accordion directly opened in browser on 2026-11-17. Embedded King Eddy Artist Web Submission Formstack form 3587563 exposes artist/band, website, band-member and show details plus Submit. Actual response route https://nmccanada.formstack.com/forms/updated_artist_band_booking reachable. No submission made. Prior 2026-11-14 checking-client HTTP 403 retained as historical evidence; venue closure was not established.",
+      "last_attempt_on": "2026-11-17"
     },
     {
       "id": "ig-ca-20261111-venue-05",
@@ -1031,13 +1031,13 @@
       "title": "Music and show booking inquiries",
       "summary": "Halifax community art and music space provides a channel for show and rehearsal inquiries.",
       "source_url": "https://www.radstorm.org/contact/",
-      "verified_on": "2026-11-13",
-      "approval_status": "review_required",
+      "verified_on": "2026-11-17",
+      "approval_status": "approved",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
       "submission_type": "Rolling artist inquiry",
-      "review_reason": "Official source verification blocked for checking client: HTTP 406. Actual artist inquiry could not be verified. Venue closure is not established.",
-      "last_attempt_on": "2026-11-14"
+      "review_reason": "Official contact page directly opened in browser on 2026-11-17 and displays dedicated music/show booking and rehearsal inquiry instructions. Published official response route verified on the source; no message sent or delivery tested. Prior 2026-11-14 checking-client HTTP 406 retained as historical evidence; venue closure was not established.",
+      "last_attempt_on": "2026-11-17"
     },
     {
       "id": "ig-us-20261112-01",
@@ -1079,11 +1079,13 @@
       "title": "Submit your act",
       "summary": "Local and touring soloists, duos and bands; originals or covers. Dedicated performer form for future programming; dates require confirmation.",
       "source_url": "https://www.thesavoybarandmusic.com.au/submit-your-act",
-      "verified_on": "2026-11-13",
+      "verified_on": "2026-11-17",
       "approval_status": "approved",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
-      "submission_type": "Rolling venue inquiry"
+      "submission_type": "Rolling venue inquiry",
+      "last_attempt_on": "2026-11-17",
+      "review_reason": "Official Submit Your Act page and its actual embedded artist form directly opened in browser on 2026-11-17. Form exposes name, stage/band name, email, performance details and Submit My Act. No form submitted and no challenge attempted. Rolling inquiry only, no specific gig availability confirmed."
     },
     {
       "id": "ig-ie-20261112-venue-01",
@@ -1093,11 +1095,13 @@
       "title": "Rolling artist submissions",
       "summary": "Year-round music submissions for Other Voices events through its official artist form; not a confirmed booking or vacant performance date.",
       "source_url": "https://www.othervoices.ie/submissions",
-      "verified_on": "2026-11-13",
+      "verified_on": "2026-11-17",
       "approval_status": "approved",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
-      "submission_type": "Rolling programme inquiry"
+      "submission_type": "Rolling programme inquiry",
+      "last_attempt_on": "2026-11-17",
+      "review_reason": "Official rolling artist-submissions page and its linked Other Voices Dingle Music Trail Google Form directly opened in browser on 2026-11-17. Form exposes contact/act, country, streaming and performance links plus Submit. No application sent; rolling submission is not a confirmed performance or guaranteed response."
     },
     {
       "id": "ig-rs-20261112-festival-01",
