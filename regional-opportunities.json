@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_on": "2026-11-17",
+  "updated_on": "2026-11-18",
   "scope": "United States, Canada, United Kingdom, Australia, Ireland and Serbia",
   "review_source": "Organizer-controlled performer submission/application pages; opening dates not guaranteed",
   "opportunities": [
@@ -511,15 +511,15 @@
       "organizer": "Logjam Presents",
       "location": "Missoula / Bozeman, MT",
       "title": "Artist booking inquiry",
-      "summary": "Booking inquiries for Top Hat, Wilma, KettleHouse and ELM; three-month lead time.",
+      "summary": "Montana promoter accepts artist booking inquiries for Top Hat, Wilma, KettleHouse Amphitheater and ELM. Submit the full requested artist materials at least three months before the desired show; no vacant date or engagement is promised.",
       "source_url": "https://logjampresents.com/booking-information/",
-      "verified_on": "2026-11-13",
-      "approval_status": "review_required",
+      "verified_on": "2026-11-18",
+      "approval_status": "approved",
       "approved_by_owner": true,
       "source_kind": "organizer submission page",
       "submission_type": "Rolling venue inquiry",
-      "review_reason": "Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
-      "last_attempt_on": "2026-11-14"
+      "review_reason": "2026-11-18 direct browser check passed: official booking page and embedded form expose contact/artist, dates, website, performance history, payment request, bio/press uploads and Submit. Source requires inquiries at least three months ahead. No form submitted. Prior checking-client failure retained below. Official source verification blocked for checking client: HTTP 403. Actual artist inquiry could not be verified. Venue closure is not established.",
+      "last_attempt_on": "2026-11-18"
     },
     {
       "id": "ig-us-20261111-36",
@@ -897,11 +897,13 @@
       "title": "Jazz artist booking inquiry",
       "summary": "The official contact page currently presents a security/cookie interstitial, preventing a fresh direct check of its artist-booking instructions. Withheld pending verification; venue closure is not established.",
       "source_url": "https://www.frankiesjazzclub.ca/contact/",
-      "verified_on": "2026-11-12",
-      "approval_status": "review_required",
+      "verified_on": "2026-11-18",
+      "approval_status": "approved",
       "approved_by_owner": true,
       "source_kind": "official organizer submission page",
-      "submission_type": "Rolling artist inquiry"
+      "submission_type": "Rolling artist inquiry",
+      "last_attempt_on": "2026-11-18",
+      "review_reason": "2026-11-18 direct browser check passed: official contact page displays dedicated artist-booking email instructions. General contact form is separate. No message sent or delivery tested. Prior checking-client failure retained below. undefined"
     },
     {
       "id": "ig-ca-20261111-venue-07",
@@ -1149,6 +1151,26 @@
       "approval_status": "approved",
       "approved_by_owner": true,
       "source_kind": "official venue band-submission page",
+      "submission_type": "Rolling artist inquiry"
+    },
+    {
+      "id": "ig-rs-20261118-venue-01",
+      "category": "venue",
+      "organizer": "KC GRAD",
+      "country": "Serbia",
+      "country_code": "RS",
+      "region": "Belgrade",
+      "location": "Belgrade, Serbia",
+      "title": "Music-program inquiries",
+      "summary": "Belgrade cultural centre publishes a dedicated music-program inquiry route. Rolling program inquiry only; performance availability, terms and fees require organizer confirmation.",
+      "source_url": "https://www.kcgrad.rs/your-visit/",
+      "inquiry_url": "https://www.kcgrad.rs/your-visit/",
+      "inquiry_route": "Use the dedicated Music Program Enquiries email instructions displayed on the official page.",
+      "source_evidence": "Official venue page directly opened on 2026-11-18; dedicated music-program instructions and Belgrade venue address displayed. No outreach or delivery test.",
+      "verified_on": "2026-11-18",
+      "approval_status": "approved",
+      "approved_by_owner": true,
+      "source_kind": "official venue music-program inquiry page",
       "submission_type": "Rolling artist inquiry"
     }
   ]
