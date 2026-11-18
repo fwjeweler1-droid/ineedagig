@@ -84,7 +84,7 @@ if(browseInstructors){
  $('memberInstructorLink').hidden=false;
  $('optionalJoin').innerHTML='Offer lessons yourself? <a href="https://connect.intentionalnoise.info/auth.html?role=instructor#auth">Create an instructor account only when you choose to</a>.';
 }
-let artists=[];let verifiedArtistIds=new Set();
+let artists=[];let verifiedArtistIds=new Set();let shopByOwner=new Map();
 function el(tag,txt,cls){const node=document.createElement(tag);if(txt!==undefined)node.textContent=txt;if(cls)node.className=cls;return node}
 function setStatus(text){$('status').textContent=text}
 function link(text,url,cls='button alt'){const a=el('a',text,cls);a.href=url;return a}
@@ -93,6 +93,8 @@ function artistUrl(p){return 'https://intentionalnoise.band/'+encodeURIComponent
 function profileUrl(p){return location.pathname+'?slug='+encodeURIComponent(p.slug)+(browseInstructors?'&role=instructor':'')}
 const publishedArtwork=new Map();
 function httpsImage(value){try{const u=new URL(value);return u.protocol==='https:'?u.href:null}catch{return null}}
+function cartLink(p){const url=shopByOwner.get(p.user_id);if(!url)return null;try{const u=new URL(url);if(u.protocol!=='https:'||u.username||u.password)return null;const a=link('Shop this artist',u.href);a.target='_blank';a.rel='noopener noreferrer';return a}catch{return null}}
+
 function firstLetters(name){const parts=String(name||'Artist').trim().split(/\s+/).filter(Boolean);return (parts.length>1?parts.slice(0,2).map(s=>s[0]).join(''):parts[0].slice(0,2)).toUpperCase()}
 function photo(p){
  const frame=el('div',null,'artwork');frame.setAttribute('role','img');frame.setAttribute('aria-label',p.display_name+' artwork or artist placeholder');
@@ -144,7 +146,7 @@ function card(p){
  if(p.available_for_gigs)box.append(el('span','Available for gigs','pill'));
  if(p.bio)box.append(el('p',p.bio.slice(0,180)));
  if((p.genres||[]).length)box.append(el('p','Genres: '+p.genres.slice(0,6).join(', ')));
- const acts=el('div',null,'actions');acts.append(link('View profile',profileUrl(p)),link('Message this artist',messageUrl(p)),link('Request a gig',messageUrl(p,true)));box.append(acts);
+ const acts=el('div',null,'actions');acts.append(link('View profile',profileUrl(p)),link('Message this artist',messageUrl(p)),link('Request a gig',messageUrl(p,true)));const shop=cartLink(p);if(shop)acts.append(shop);box.append(acts);
  return box;
 }
 function showProfile(p){
@@ -157,7 +159,7 @@ function showProfile(p){
  detailLine(root,'Instruments',(p.instruments||[]).join(', '));
  detailLine(root,'Genres',(p.genres||[]).join(', '));
  detailLine(root,'Roles',(p.roles||[]).join(', '));
- const acts=el('div',null,'actions');acts.append(link('View full artist showcase',artistUrl(p)),link('Message this artist',messageUrl(p)),link('Request a gig / appearance',messageUrl(p,true)),link('All published artists',location.pathname));root.append(acts);
+ const acts=el('div',null,'actions');acts.append(link('View full artist showcase',artistUrl(p)),link('Message this artist',messageUrl(p)),link('Request a gig / appearance',messageUrl(p,true)),link('All published artists',location.pathname));const shop=cartLink(p);if(shop)acts.append(shop);root.append(acts);
  root.hidden=false;
  setStatus('Public artist profile · automatically synchronized from Connect.');
 }
@@ -178,6 +180,23 @@ async function load(){
   if(!res.ok)throw Error('Published directory unavailable ('+res.status+').');
   const data=await res.json();if(!Array.isArray(data))throw Error('Unexpected directory response.');
   artists=data;
+  shopByOwner=new Map();
+  try{
+    for(let i=0;i<artists.length;i+=100){
+      const stores=await fetch(new URL('rpc/list_published_artist_shops', API.replace(/artist_pages$/, '')),{
+        method:'POST',
+        headers:{apikey:KEY,Accept:'application/json','Content-Type':'application/json'},
+        body:JSON.stringify({p_artist_ids:artists.slice(i,i+100).map(artist=>artist.user_id)}),
+        cache:'no-store'
+      });
+      if(!stores.ok)throw Error('Storefront lookup unavailable');
+      const rows=await stores.json();
+      if(Array.isArray(rows))for(const shop of rows)shopByOwner.set(shop.user_id,shop.cart_url);
+    }
+  }catch{
+    // Fail closed if this optional endpoint is unavailable.
+    shopByOwner=new Map();
+  }
   try{
     const badgeRes=await fetch('https://xyudcdgjyormlokwhfoi.supabase.co/rest/v1/verified_artist_accounts?select=user_id&limit=1000',{headers:{apikey:KEY,Accept:'application/json'},cache:'no-store'});
     if(badgeRes.ok){const badges=await badgeRes.json();verifiedArtistIds=new Set((Array.isArray(badges)?badges:[]).map(b=>b.user_id));}
