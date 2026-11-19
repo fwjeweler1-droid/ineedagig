@@ -1,0 +1,9 @@
+# Public web assets only: keep repository and handoff documents off Cloudflare Workers.
+# This file belongs at the root of the static asset directory.
+CNAME
+README.md
+EXTERNAL_PERFORMERS_WORKFLOW.md
+REGIONAL_OPPORTUNITIES_REVIEW.md
+network-sync.json
+.github/
+.git/
