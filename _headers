@@ -1,2 +1,3 @@
-/*
+# Prevent search indexing of the Cloudflare Worker preview only.
+https://ineedagig.intntnlnoise.workers.dev/*
   X-Robots-Tag: noindex, nofollow, nosnippet
