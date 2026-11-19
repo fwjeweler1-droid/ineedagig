@@ -1,0 +1,4 @@
+# Prevent search engines from indexing the Cloudflare Worker preview.
+# The production domain ineedagig.net remains indexable.
+https://ineedagig.intntnlnoise.workers.dev/*
+  X-Robots-Tag: noindex, nofollow, nosnippet
