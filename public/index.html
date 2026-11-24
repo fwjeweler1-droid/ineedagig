@@ -30,6 +30,28 @@ header,footer{background:linear-gradient(90deg,#142d21,#203d2b 52%,#142d21)}
 .choice{background:linear-gradient(148deg,#335e3d 0%,#244631 55%,#183326 100%);border-color:#96b77e;box-shadow:0 14px 34px #05170b70,inset 0 0 0 1px #d2cc8333}
 .choice.hiring{background:linear-gradient(145deg,#5c4b30 0%,#3b4930 56%,#203828 100%);border-color:#c0a66e}
 .choice img{filter:drop-shadow(0 7px 11px #071c1355)}
+
+/* Musician welcome: the same swamp-green, warm gold and cream palette. */
+.musician-welcome{width:min(540px,calc(100% - 28px));max-height:calc(100vh - 28px);max-height:calc(100dvh - 28px);overflow:auto;overscroll-behavior:contain;padding:24px;border:2px solid #96b77e;border-radius:20px;background:linear-gradient(148deg,#335e3d 0%,#244631 55%,#183326 100%);color:var(--cream);box-shadow:0 18px 70px #05170bcc;text-align:center}
+.musician-welcome::backdrop{background:#071b14c9}
+.welcome-close{position:absolute;top:10px;right:10px;display:grid;place-items:center;width:44px;height:44px;border:1px solid #96b77e;border-radius:12px;background:#183326;color:var(--cream);font:inherit;font-size:1.55rem;cursor:pointer}
+.welcome-mascot{display:block;width:200px;height:auto;max-width:54%;margin:0 auto 4px;filter:drop-shadow(0 7px 11px #071c1355)}
+.welcome-kicker{font-size:.77rem;font-weight:850;letter-spacing:.11em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+.musician-welcome h2{font-size:clamp(1.65rem,5vw,2.3rem);line-height:1.12;letter-spacing:-.04em;margin:0 0 12px}
+.welcome-lead{font-size:1rem;line-height:1.5;margin:0 auto 12px;max-width:42ch}
+.welcome-storage{padding:12px;border:1px solid #769b78;border-radius:12px;background:#152e23aa;line-height:1.45;font-size:.9rem;margin:0 0 12px}
+.welcome-storage strong{display:block;color:var(--gold);margin-bottom:4px}
+.welcome-storage small{display:block;color:#d8e7d6;font-size:.78rem;margin-top:5px}
+.welcome-promise{font-weight:850;color:var(--mint);line-height:1.45;margin:12px 0 16px}
+.welcome-actions{display:grid;gap:9px}
+.welcome-actions a{min-height:46px;display:flex;align-items:center;justify-content:center;padding:10px 15px;border-radius:10px;border:1px solid var(--gold);background:var(--gold);color:#182c20;font-weight:850;text-decoration:none}
+.welcome-actions .signup{background:var(--mint);border-color:var(--mint)}
+.welcome-actions .browse{background:transparent;color:var(--cream);border-color:#96b77e}
+.welcome-actions a:hover,.welcome-close:hover{border-color:var(--cream)}
+.welcome-actions a:focus-visible,.welcome-close:focus-visible{outline:3px solid #c2ffb2;outline-offset:3px}
+.welcome-foot{color:#d8e7d6;font-size:.82rem;margin:12px 0 0}
+@media(max-width:650px){.musician-welcome{padding:18px 16px}.welcome-mascot{width:140px}.welcome-lead{font-size:.94rem}.welcome-storage{padding:10px}}
+
 </style>
 <link rel="canonical" href="https://ineedagig.net/"><meta name="robots" content="index,follow"><meta property="og:type" content="website"><meta property="og:site_name" content="IneedaGig™"><meta property="og:title" content="IneedaGig™ — Find a gig. Find entertainment."><meta property="og:description" content="IneedaGig: find live music opportunities or hire musicians and bands. Three simple choices."><meta property="og:url" content="https://ineedagig.net/"><meta name="twitter:card" content="summary"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"IneedaGig™","url":"https://ineedagig.net/","description":"Find musician opportunities, performers, instructors, and live entertainment","publisher":{"@type":"Organization","name":"Intentional Noise","url":"https://intentionalnoise.info/"}}</script></head>
 <body>
@@ -37,14 +59,40 @@ header,footer{background:linear-gradient(90deg,#142d21,#203d2b 52%,#142d21)}
 <main id="book"><div class="wrap">
 <h1>What are you looking for?</h1>
 <nav class="choices" aria-label="Choose your path">
-<a class="choice" href="musicians.html" aria-label="I am an artist or musician — browse gigs and opportunities without signing in"><img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="" loading="eager" width="900" height="900"><span>I'm an artist / musician</span></a>
+<a class="choice" id="musicianChoice" href="musicians.html" aria-label="I am an artist or musician — sign in, sign up free, or browse gigs" aria-haspopup="dialog"><img src="https://connect.intentionalnoise.info/FROG_Official_IntentionalNoise_Info_Mascot_LOCKED.png" alt="" loading="eager" width="900" height="900"><span>I'm an artist / musician</span></a>
 <a class="choice hiring" href="venues.html"><img src="https://connect.intentionalnoise.info/Ineeda_Gig_Mascot_APPROVED_2026-11-08.png" alt="" loading="eager" width="1254" height="1254"><span>I'm hiring</span></a>
 <a class="choice instructor" href="artists.html?role=instructor" aria-label="Find an instructor — browse publicly published teaching showcases before joining"><img src="https://connect.intentionalnoise.info/Testerosa_Instructor_APPROVED_2026-11-12.webp" alt="Testerosa, the Instructor mascot" loading="eager" width="1000" height="750"><span>Find an Instructor</span></a>
 </nav>
 <p style="text-align:center;color:#d8e7d6;font-size:.9rem;margin:18px 0 0">Look around first. Sign in only when you want member-only tools.</p>
 </div></main>
+<dialog class="musician-welcome" id="musicianWelcome" aria-labelledby="welcomeTitle">
+<button class="welcome-close" type="button" id="closeMusicianWelcome" aria-label="Close musician welcome" autofocus>×</button>
+<img class="welcome-mascot" src="ineedagig-musician-mascot.webp" width="480" height="480" alt="Ineeda Gig, our guitar-playing frog mascot" decoding="async">
+<p class="welcome-kicker">Welcome to IneedaGig™</p>
+<h2 id="welcomeTitle">Your talent. Your freedom.</h2>
+<p class="welcome-lead">Showcase, collaborate, produce, store your creations, find instruction and discover talent — all from one <strong>FREE account!</strong></p>
+<div class="welcome-storage"><strong>Your storage. No platform-imposed limits.</strong>Use and stack your own storage — iCloud, OneDrive, pCloud, your own server and more. Grow your storage as you need it.<small>Available capacity and any provider charges depend on your own storage accounts.</small></div>
+<p class="welcome-promise">No paywalls. No advertising. No data mining.</p>
+<nav class="welcome-actions" aria-label="Musician account options">
+<a href="https://connect.intentionalnoise.info/auth.html?role=musician&amp;intent=login#auth">Sign In</a>
+<a class="signup" href="https://connect.intentionalnoise.info/auth.html?role=musician&amp;intent=signup#auth">Sign Up — FREE</a>
+<a class="browse" href="musicians.html">Browse Gigs</a>
+</nav>
+<p class="welcome-foot">Built for musicians, not advertisers.</p>
+</dialog>
 <footer><div class="wrap"><a href="free-vs-paid.html">What's free?</a><a href="free-vs-paid.html#guaranteed-free">What's guaranteed free?</a><a href="privacy/">Privacy</a></div></footer>
 <script>
+// Use a native accessible modal; retain direct browsing if dialogs or JS are unavailable.
+(function(){
+ const choice=document.getElementById('musicianChoice'),welcome=document.getElementById('musicianWelcome');
+ if(!choice||!welcome||typeof welcome.showModal!=='function')return;
+ choice.addEventListener('click',function(e){
+  if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+  e.preventDefault();if(!welcome.open)welcome.showModal();
+ });
+ document.getElementById('closeMusicianWelcome').addEventListener('click',()=>welcome.close());
+ welcome.addEventListener('close',()=>choice.focus());
+})();
 // Preserve links shared from older IneedaGig pages without placing those sections on the homepage.
 (function(){
  const q=new URLSearchParams(location.search),h=location.hash;
