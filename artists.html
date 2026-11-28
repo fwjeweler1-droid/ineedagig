@@ -157,7 +157,7 @@ function showProfile(p){
  detailLine(root,'Instruments',(p.instruments||[]).join(', '));
  detailLine(root,'Genres',(p.genres||[]).join(', '));
  detailLine(root,'Roles',(p.roles||[]).join(', '));
- const acts=el('div',null,'actions');acts.append(link('View full artist showcase',artistUrl(p)),link('Message this artist',messageUrl(p)),link('Request a gig / appearance',messageUrl(p,true)),link('All published artists',location.pathname));root.append(acts);
+ const acts=el('div',null,'actions');acts.append(link('View full artist showcase',artistUrl(p)),link('Calendar','https://connect.intentionalnoise.info/calendar.html?slug='+encodeURIComponent(p.slug)),link('Message this artist',messageUrl(p)),link('Request a gig / appearance',messageUrl(p,true)),link('All published artists',location.pathname));root.append(acts);
  root.hidden=false;
  setStatus('Public artist profile · automatically synchronized from Connect.');
 }
